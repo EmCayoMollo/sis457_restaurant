@@ -1,0 +1,12 @@
+C:\Users\edzon\Desktop\sis457_restaurante\Sis457Restaurant\CadRestaurant\bin\Debug\CadRestaurant.dll.config
+C:\Users\edzon\Desktop\sis457_restaurante\Sis457Restaurant\CadRestaurant\bin\Debug\CadRestaurant.dll
+C:\Users\edzon\Desktop\sis457_restaurante\Sis457Restaurant\CadRestaurant\bin\Debug\CadRestaurant.pdb
+C:\Users\edzon\Desktop\sis457_restaurante\Sis457Restaurant\CadRestaurant\bin\Debug\EntityFramework.dll
+C:\Users\edzon\Desktop\sis457_restaurante\Sis457Restaurant\CadRestaurant\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\edzon\Desktop\sis457_restaurante\Sis457Restaurant\CadRestaurant\bin\Debug\EntityFramework.xml
+C:\Users\edzon\Desktop\sis457_restaurante\Sis457Restaurant\CadRestaurant\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\edzon\Desktop\sis457_restaurante\Sis457Restaurant\CadRestaurant\obj\Debug\CadRestaurant.csproj.AssemblyReference.cache
+C:\Users\edzon\Desktop\sis457_restaurante\Sis457Restaurant\CadRestaurant\obj\Debug\CadRestaurant.csproj.CoreCompileInputs.cache
+C:\Users\edzon\Desktop\sis457_restaurante\Sis457Restaurant\CadRestaurant\obj\Debug\CadResta.EBC64C53.Up2Date
+C:\Users\edzon\Desktop\sis457_restaurante\Sis457Restaurant\CadRestaurant\obj\Debug\CadRestaurant.dll
+C:\Users\edzon\Desktop\sis457_restaurante\Sis457Restaurant\CadRestaurant\obj\Debug\CadRestaurant.pdb

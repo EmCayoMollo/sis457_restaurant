@@ -178,6 +178,17 @@ GO
 EXEC paProductoListar '';
 EXEC paEmpleadoListar '';
 
+INSERT INTO Producto(codigo, descripcion, unidadMedida, saldo, precioVenta)
+VALUES ('AL001', 'Arroz Grano Largo', 'Kg', 0, 2.50);
+
+INSERT INTO Producto(codigo, descripcion, unidadMedida, saldo, precioVenta)
+VALUES ('CA002', 'Carne de Res Molida', 'Kg', 0, 6.80);
+
+INSERT INTO Producto(codigo, descripcion, unidadMedida, saldo, precioVenta)
+VALUES ('PO003', 'Pollo Entero', 'Unidad', 0, 5.20);
+
+INSERT INTO Producto(codigo, descripcion, unidadMedida, saldo, precioVenta)
+VALUES ('VE004', 'Papa Blanca', 'Kg', 0, 1.40);
 
 INSERT INTO Empleado(cedulaIdentidad, nombres, primerApellido, segundoApellido, direccion, celular, cargo)
 VALUES ('123457', 'Alex', 'Arias', 'López', 'Calle Loa 50', 16767676, 'Limpieza');
@@ -187,3 +198,8 @@ VALUES ('123456', 'Juan', 'Pérez', 'López', 'Calle Loa 50', 76767676, 'Cajero');
 
 INSERT INTO Usuario(idEmpleado, usuario, clave)
 VALUES (1, 'jperez', 'i0hcoO/nssY6WOs9pOp5Xw==');
+
+UPDATE Usuario SET clave='i0hcoO/nssY6WOs9pOp5Xw==' WHERE id=1;
+
+SELECT * FROM Producto;
+SELECT * FROM Usuario;

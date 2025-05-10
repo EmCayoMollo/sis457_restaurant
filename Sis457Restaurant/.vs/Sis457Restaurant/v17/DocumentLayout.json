@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\sis457_restaurant\\Sis457Restaurant\\",
+  "WorkspaceRootPath": "C:\\SIS457Restaurant\\sis457_restaurant\\Sis457Restaurant\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6103A87F-4AFA-4297-94CC-D652176BAC25}|CpRestaurant\\CpRestaurant.csproj|c:\\sis457_restaurant\\sis457restaurant\\cprestaurant\\frmautenticacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{6103A87F-4AFA-4297-94CC-D652176BAC25}|CpRestaurant\\CpRestaurant.csproj|c:\\sis457restaurant\\sis457_restaurant\\sis457restaurant\\cprestaurant\\frmautenticacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6103A87F-4AFA-4297-94CC-D652176BAC25}|CpRestaurant\\CpRestaurant.csproj|solutionrelative:cprestaurant\\frmautenticacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -20,9 +20,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "FrmAutenticacion.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\sis457_restaurant\\Sis457Restaurant\\CpRestaurant\\FrmAutenticacion.cs",
+              "DocumentMoniker": "C:\\SIS457Restaurant\\sis457_restaurant\\Sis457Restaurant\\CpRestaurant\\FrmAutenticacion.cs",
               "RelativeDocumentMoniker": "CpRestaurant\\FrmAutenticacion.cs",
-              "ToolTip": "C:\\sis457_restaurant\\Sis457Restaurant\\CpRestaurant\\FrmAutenticacion.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\SIS457Restaurant\\sis457_restaurant\\Sis457Restaurant\\CpRestaurant\\FrmAutenticacion.cs [Dise\u00F1o]",
               "RelativeToolTip": "CpRestaurant\\FrmAutenticacion.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-19T22:35:48.278Z",

@@ -73,6 +73,26 @@ namespace CpRestaurant.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _360_F_964891898_SuTIP6H2AVZkBuUG1 {
+            get {
+                object obj = ResourceManager.GetObject("360_F_964891898_SuTIP6H2AVZkBuUG1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap acceso {
+            get {
+                object obj = ResourceManager.GetObject("acceso", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap account_circle_100dp_000000_FILL0_wght400_GRAD0_opsz48 {
             get {
                 object obj = ResourceManager.GetObject("account_circle_100dp_000000_FILL0_wght400_GRAD0_opsz48", resourceCulture);

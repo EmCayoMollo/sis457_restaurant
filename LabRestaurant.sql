@@ -15,7 +15,7 @@ ALTER ROLE [db_owner] ADD MEMBER [usrrest]
 GO
 
 drop database LabRestaurant
-DROP TABLE Producto;
+DROP TABLE Platillos;
 DROP TABLE Empleado;
 DROP TABLE Usuario;
 DROP TABLE Proveedor;
@@ -25,7 +25,7 @@ DROP TABLE Venta;
 DROP TABLE CompraDetalle;
 DROP TABLE VentaDetalle;
 
-CREATE TABLE Producto(
+CREATE TABLE Platillos(
     id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
     codigo VARCHAR(10) NOT NULL,
     nombre VARCHAR(30) NOT NULL,
@@ -83,10 +83,10 @@ CREATE TABLE Compra (
 
 CREATE TABLE Venta(
   id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
-  idProducto INT NOT NULL,
+  idPlatillos INT NOT NULL,
   transaccion int NOT NULL,
   fecha DATE NOT NULL DEFAULT GETDATE(),
-  CONSTRAINT fk_venta_Producto FOREIGN KEY(idProducto) REFERENCES Producto(id)
+  CONSTRAINT fk_venta_Platillos FOREIGN KEY(idPlatillos) REFERENCES Platillos(id)
 );
 
 CREATE TABLE CompraDetalle (
@@ -103,12 +103,12 @@ CREATE TABLE CompraDetalle (
 CREATE TABLE VentaDetalle (
   id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
   idVenta INT NOT NULL,
-  idProducto INT NOT NULL,
+  idPlatillos INT NOT NULL,
   cantidad DECIMAL NOT NULL CHECK (cantidad > 0),
   precioUnitario DECIMAL NOT NULL,
   total DECIMAL NOT NULL,
   CONSTRAINT fk_CompresDetalle FOREIGN KEY (idVenta) REFERENCES Venta(id),
-  CONSTRAINT fk_ComprasDetalle FOREIGN KEY (idProducto) REFERENCES Producto(id)
+  CONSTRAINT fk_ComprasDetalle FOREIGN KEY (idPlatillos) REFERENCES Platillos(id)
 );
 
 ALTER TABLE Cliente ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
@@ -127,9 +127,9 @@ ALTER TABLE VentaDetalle ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_
 ALTER TABLE VentaDetalle ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
 ALTER TABLE VentaDetalle ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Eliminado, 0: Inactivo, 1: Activo
 
-ALTER TABLE Producto ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
-ALTER TABLE Producto ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
-ALTER TABLE Producto ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Eliminado, 0: Inactivo, 1: Activo
+ALTER TABLE Platillos ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
+ALTER TABLE Platillos ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
+ALTER TABLE Platillos ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Eliminado, 0: Inactivo, 1: Activo
 
 ALTER TABLE Proveedor ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
 ALTER TABLE Proveedor ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
@@ -154,9 +154,9 @@ ALTER TABLE CompraDetalle ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Elimina
 GO
 
 
-create PROC paProductoListar @parametro VARCHAR(100)
+create PROC paPlatillosListar @parametro VARCHAR(100)
 AS
-  SELECT * FROM Producto
+  SELECT * FROM Platillos
   WHERE estado<>-1 and codigo+nombre LIKE '%'+REPLACE(@parametro, ' ', '%')+'%'
   ORDER BY estado desc, nombre asc;
 GO
@@ -175,20 +175,20 @@ AS
   WHERE estado<>-1 and ci+nombreCompleto LIKE '%'+REPLACE(@parametro, ' ', '%')+'%'
   ORDER BY estado desc, nombreCompleto asc;
 GO
-EXEC paProductoListar '';
+EXEC paPlatillosListar '';
 EXEC paEmpleadoListar '';
 
-INSERT INTO Producto(codigo, descripcion, unidadMedida, saldo, precioVenta)
-VALUES ('AL001', 'Arroz Grano Largo', 'Kg', 0, 2.50);
+INSERT INTO Platillos(codigo, nombre, precio)
+VALUES ('AL001', 'Picante de Pollo',15);
 
-INSERT INTO Producto(codigo, descripcion, unidadMedida, saldo, precioVenta)
-VALUES ('CA002', 'Carne de Res Molida', 'Kg', 0, 6.80);
+INSERT INTO Platillos(codigo, nombre, precio)
+VALUES ('CA002', 'Majadito',15);
 
-INSERT INTO Producto(codigo, descripcion, unidadMedida, saldo, precioVenta)
-VALUES ('PO003', 'Pollo Entero', 'Unidad', 0, 5.20);
+INSERT INTO Platillos(codigo, nombre, precio)
+VALUES ('PO003', 'Parrillada', 20);
 
-INSERT INTO Producto(codigo, descripcion, unidadMedida, saldo, precioVenta)
-VALUES ('VE004', 'Papa Blanca', 'Kg', 0, 1.40);
+INSERT INTO Platillos(codigo, nombre, precio)
+VALUES ('VE004', 'Mondongo', 25);
 
 INSERT INTO Empleado(cedulaIdentidad, nombres, primerApellido, segundoApellido, direccion, celular, cargo)
 VALUES ('123457', 'Alex', 'Arias', 'López', 'Calle Loa 50', 16767676, 'Limpieza');
@@ -201,5 +201,5 @@ VALUES (1, 'jperez', 'i0hcoO/nssY6WOs9pOp5Xw==');
 
 UPDATE Usuario SET clave='i0hcoO/nssY6WOs9pOp5Xw==' WHERE id=1;
 
-SELECT * FROM Producto;
+SELECT * FROM Platillos;
 SELECT * FROM Usuario;

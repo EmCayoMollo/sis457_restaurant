@@ -130,6 +130,9 @@
   <data name="account_circle_100dp_000000_FILL0_wght700_GRAD0_opsz48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\account_circle_100dp_000000_FILL0_wght700_GRAD0_opsz48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="360_F_964891898_SuTIP6H2AVZkBuUG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\360_F_964891898_SuTIP6H2AVZkBuUG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="close_50dp_000000_FILL0_wght500_GRAD0_opsz48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close_50dp_000000_FILL0_wght500_GRAD0_opsz48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -139,7 +142,10 @@
   <data name="login_100dp_000000_FILL0_wght700_GRAD0_opsz48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login_100dp_000000_FILL0_wght700_GRAD0_opsz48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="360_F_964891898_SuTIP6H2AVZkBuUG" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\360_F_964891898_SuTIP6H2AVZkBuUG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="360_F_964891898_SuTIP6H2AVZkBuUG1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\360_F_964891898_SuTIP6H2AVZkBuUG1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="acceso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\acceso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

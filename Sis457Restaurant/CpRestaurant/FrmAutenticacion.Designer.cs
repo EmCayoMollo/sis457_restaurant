@@ -41,17 +41,19 @@
             this.erpUsuario = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpClave = new System.Windows.Forms.ErrorProvider(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpClave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCerrar
             // 
             this.btnCerrar.Image = global::CpRestaurant.Properties.Resources.close_50dp_000000_FILL0_wght500_GRAD0_opsz48;
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrar.Location = new System.Drawing.Point(288, 181);
+            this.btnCerrar.Location = new System.Drawing.Point(247, 220);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(80, 36);
             this.btnCerrar.TabIndex = 15;
@@ -62,9 +64,9 @@
             // 
             // btnIngresar
             // 
-            this.btnIngresar.Image = global::CpRestaurant.Properties.Resources.login_50dp_000000_FILL0_wght500_GRAD0_opsz48;
+            this.btnIngresar.Image = ((System.Drawing.Image)(resources.GetObject("btnIngresar.Image")));
             this.btnIngresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIngresar.Location = new System.Drawing.Point(167, 181);
+            this.btnIngresar.Location = new System.Drawing.Point(155, 220);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(76, 36);
             this.btnIngresar.TabIndex = 14;
@@ -76,24 +78,24 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::CpRestaurant.Properties.Resources._360_F_964891898_SuTIP6H2AVZkBuUG;
-            this.pictureBox1.Location = new System.Drawing.Point(386, 92);
+            this.pictureBox1.Image = global::CpRestaurant.Properties.Resources.account_circle_100dp_000000_FILL0_wght400_GRAD0_opsz48;
+            this.pictureBox1.Location = new System.Drawing.Point(197, 48);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(84, 80);
+            this.pictureBox1.Size = new System.Drawing.Size(77, 62);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
             // txtClave
             // 
-            this.txtClave.Location = new System.Drawing.Point(212, 137);
+            this.txtClave.Location = new System.Drawing.Point(167, 181);
             this.txtClave.Name = "txtClave";
             this.txtClave.Size = new System.Drawing.Size(144, 20);
             this.txtClave.TabIndex = 10;
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(210, 92);
+            this.txtUsuario.Location = new System.Drawing.Point(167, 133);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(144, 20);
             this.txtUsuario.TabIndex = 9;
@@ -101,7 +103,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(139, 140);
+            this.label2.Location = new System.Drawing.Point(164, 165);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 13);
             this.label2.TabIndex = 12;
@@ -111,7 +113,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.Location = new System.Drawing.Point(148, 99);
+            this.label1.Location = new System.Drawing.Point(164, 117);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 11;
@@ -122,7 +124,7 @@
             this.titulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titulo.Location = new System.Drawing.Point(205, 43);
+            this.titulo.Location = new System.Drawing.Point(162, 9);
             this.titulo.Name = "titulo";
             this.titulo.Size = new System.Drawing.Size(149, 36);
             this.titulo.TabIndex = 8;
@@ -147,13 +149,24 @@
             this.pictureBox2.TabIndex = 16;
             this.pictureBox2.TabStop = false;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(348, -58);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(219, 170);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 17;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
             // FrmAutenticacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
             this.ClientSize = new System.Drawing.Size(510, 314);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.pictureBox1);
@@ -162,6 +175,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.titulo);
+            this.Controls.Add(this.pictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmAutenticacion";
@@ -171,6 +185,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.erpUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.erpClave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,6 +204,7 @@
 		private System.Windows.Forms.ErrorProvider erpUsuario;
 		private System.Windows.Forms.ErrorProvider erpClave;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
 

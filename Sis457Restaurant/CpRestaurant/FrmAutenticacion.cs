@@ -67,5 +67,10 @@ namespace CpRestaurant
 		{
 			if (e.KeyChar == (char)Keys.Enter) btnIngresar.PerformClick();
 		}
-	}
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

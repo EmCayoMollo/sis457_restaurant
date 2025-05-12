@@ -1,4 +1,4 @@
-﻿// La generación de código T4 está habilitada para el modelo 'C:\Users\edzon\Desktop\sis457_restaurante\Sis457Restaurant\CadRestaurant\Modelo.edmx'. 
+﻿// La generación de código T4 está habilitada para el modelo 'C:\SIS457Restaurant\sis457_restaurant\Sis457Restaurant\CadRestaurant\Modelo.edmx'. 
 // Para habilitar la generación de código heredada, cambie el valor de la propiedad del diseñador 'Estrategia de generación de código'
 // por 'ObjectContext heredado'. Esta propiedad está disponible en la ventana Propiedades cuando se abre
 // el modelo en el diseñador.

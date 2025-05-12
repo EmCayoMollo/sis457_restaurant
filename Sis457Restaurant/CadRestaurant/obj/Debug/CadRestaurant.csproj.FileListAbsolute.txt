@@ -22,3 +22,15 @@ C:\sis457_restaurant\Sis457Restaurant\CadRestaurant\obj\Debug\CadRestaurant.cspr
 C:\sis457_restaurant\Sis457Restaurant\CadRestaurant\obj\Debug\CadResta.EBC64C53.Up2Date
 C:\sis457_restaurant\Sis457Restaurant\CadRestaurant\obj\Debug\CadRestaurant.dll
 C:\sis457_restaurant\Sis457Restaurant\CadRestaurant\obj\Debug\CadRestaurant.pdb
+C:\SIS457Restaurant\sis457_restaurant\Sis457Restaurant\CadRestaurant\bin\Debug\CadRestaurant.dll.config
+C:\SIS457Restaurant\sis457_restaurant\Sis457Restaurant\CadRestaurant\bin\Debug\CadRestaurant.dll
+C:\SIS457Restaurant\sis457_restaurant\Sis457Restaurant\CadRestaurant\bin\Debug\CadRestaurant.pdb
+C:\SIS457Restaurant\sis457_restaurant\Sis457Restaurant\CadRestaurant\bin\Debug\EntityFramework.dll
+C:\SIS457Restaurant\sis457_restaurant\Sis457Restaurant\CadRestaurant\bin\Debug\EntityFramework.SqlServer.dll
+C:\SIS457Restaurant\sis457_restaurant\Sis457Restaurant\CadRestaurant\bin\Debug\EntityFramework.xml
+C:\SIS457Restaurant\sis457_restaurant\Sis457Restaurant\CadRestaurant\bin\Debug\EntityFramework.SqlServer.xml
+C:\SIS457Restaurant\sis457_restaurant\Sis457Restaurant\CadRestaurant\obj\Debug\CadRestaurant.csproj.AssemblyReference.cache
+C:\SIS457Restaurant\sis457_restaurant\Sis457Restaurant\CadRestaurant\obj\Debug\CadRestaurant.csproj.CoreCompileInputs.cache
+C:\SIS457Restaurant\sis457_restaurant\Sis457Restaurant\CadRestaurant\obj\Debug\CadResta.EBC64C53.Up2Date
+C:\SIS457Restaurant\sis457_restaurant\Sis457Restaurant\CadRestaurant\obj\Debug\CadRestaurant.dll
+C:\SIS457Restaurant\sis457_restaurant\Sis457Restaurant\CadRestaurant\obj\Debug\CadRestaurant.pdb

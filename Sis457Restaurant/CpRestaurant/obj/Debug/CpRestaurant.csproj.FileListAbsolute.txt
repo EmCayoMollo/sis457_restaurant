@@ -43,3 +43,12 @@ C:\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestau.451A9E62.U
 C:\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.exe
 C:\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.pdb
 C:\Users\edzon\Desktop\sis457_restaurante\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.exe.licenses
+C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.csproj.AssemblyReference.cache
+C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.FrmAutenticacion.resources
+C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.FrmPrincipal.resources
+C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.Properties.Resources.resources
+C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.csproj.GenerateResource.cache
+C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.exe.licenses
+C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.csproj.CoreCompileInputs.cache
+C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.exe
+C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.pdb

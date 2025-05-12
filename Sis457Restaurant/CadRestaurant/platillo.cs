@@ -12,10 +12,10 @@ namespace CadRestaurant
     using System;
     using System.Collections.Generic;
     
-    public partial class Producto
+    public partial class platillo
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Producto()
+        public platillo()
         {
             this.VentaDetalle = new HashSet<VentaDetalle>();
             this.Venta = new HashSet<Venta>();

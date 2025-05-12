@@ -42,3 +42,4 @@ C:\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.csproj
 C:\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestau.451A9E62.Up2Date
 C:\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.exe
 C:\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.pdb
+C:\Users\edzon\Desktop\sis457_restaurante\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.exe.licenses

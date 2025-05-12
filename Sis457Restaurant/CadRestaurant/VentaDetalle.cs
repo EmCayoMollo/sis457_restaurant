@@ -24,7 +24,7 @@ namespace CadRestaurant
         public System.DateTime fechaRegistro { get; set; }
         public short estado { get; set; }
     
-        public virtual Producto Producto { get; set; }
+        public virtual platillo Producto { get; set; }
         public virtual Venta Venta { get; set; }
     }
 }

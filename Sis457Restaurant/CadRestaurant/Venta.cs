@@ -28,7 +28,7 @@ namespace CadRestaurant
         public System.DateTime fechaRegistro { get; set; }
         public short estado { get; set; }
     
-        public virtual Producto Producto { get; set; }
+        public virtual platillo Producto { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<VentaDetalle> VentaDetalle { get; set; }
     }

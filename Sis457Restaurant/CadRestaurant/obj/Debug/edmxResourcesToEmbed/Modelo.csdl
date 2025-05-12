@@ -72,7 +72,7 @@
     <Property Name="estado" Type="Int16" Nullable="false" />
     <NavigationProperty Name="CompraDetalle" Relationship="Self.fk_CompraDetalle" FromRole="Insumo" ToRole="CompraDetalle" />
   </EntityType>
-  <EntityType Name="Producto">
+  <EntityType Name="platillo">
     <Key>
       <PropertyRef Name="id" />
     </Key>
@@ -193,7 +193,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="fk_ComprasDetalle">
-    <End Role="Producto" Type="Self.Producto" Multiplicity="1" />
+    <End Role="Producto" Type="LabRestaurantModel.platillo" Multiplicity="1" />
     <End Role="VentaDetalle" Type="Self.VentaDetalle" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Producto">
@@ -205,7 +205,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="fk_venta_Producto">
-    <End Role="Producto" Type="Self.Producto" Multiplicity="1" />
+    <End Role="Producto" Type="LabRestaurantModel.platillo" Multiplicity="1" />
     <End Role="Venta" Type="Self.Venta" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Producto">
@@ -234,7 +234,7 @@
     <EntitySet Name="CompraDetalle" EntityType="Self.CompraDetalle" />
     <EntitySet Name="Empleado" EntityType="Self.Empleado" />
     <EntitySet Name="Insumo" EntityType="Self.Insumo" />
-    <EntitySet Name="Producto" EntityType="Self.Producto" />
+    <EntitySet Name="Producto" EntityType="LabRestaurantModel.platillo" />
     <EntitySet Name="Proveedor" EntityType="Self.Proveedor" />
     <EntitySet Name="Usuario" EntityType="Self.Usuario" />
     <EntitySet Name="Venta" EntityType="Self.Venta" />

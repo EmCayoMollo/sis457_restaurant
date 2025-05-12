@@ -42,6 +42,7 @@ C:\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.csproj
 C:\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestau.451A9E62.Up2Date
 C:\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.exe
 C:\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.pdb
+<<<<<<< HEAD
 C:\SIS457Restaurant\sis457_restaurant\Sis457Restaurant\CpRestaurant\bin\Debug\CpRestaurant.exe.config
 C:\SIS457Restaurant\sis457_restaurant\Sis457Restaurant\CpRestaurant\bin\Debug\CpRestaurant.exe
 C:\SIS457Restaurant\sis457_restaurant\Sis457Restaurant\CpRestaurant\bin\Debug\CpRestaurant.pdb
@@ -69,3 +70,15 @@ C:\SIS457Restaurant\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\Cp
 C:\SIS457Restaurant\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestau.451A9E62.Up2Date
 C:\SIS457Restaurant\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.exe
 C:\SIS457Restaurant\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.pdb
+=======
+C:\Users\edzon\Desktop\sis457_restaurante\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.exe.licenses
+C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.csproj.AssemblyReference.cache
+C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.FrmAutenticacion.resources
+C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.FrmPrincipal.resources
+C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.Properties.Resources.resources
+C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.csproj.GenerateResource.cache
+C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.exe.licenses
+C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.csproj.CoreCompileInputs.cache
+C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.exe
+C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.pdb
+>>>>>>> 79230c9be5df48f192662e0f212a131e9b29d2cb

@@ -73,7 +73,11 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Producto">
+<<<<<<< HEAD
       <EntityTypeMapping TypeName="LabRestaurantModel.Platillos">
+=======
+      <EntityTypeMapping TypeName="LabRestaurantModel.platillo">
+>>>>>>> 79230c9be5df48f192662e0f212a131e9b29d2cb
         <MappingFragment StoreEntitySet="Producto">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="codigo" ColumnName="codigo" />

@@ -345,7 +345,11 @@
           <Property Name="estado" Type="Int16" Nullable="false" />
           <NavigationProperty Name="CompraDetalle" Relationship="Self.fk_CompraDetalle" FromRole="Insumo" ToRole="CompraDetalle" />
         </EntityType>
+<<<<<<< HEAD
         <EntityType Name="Platillos">
+=======
+        <EntityType Name="platillo">
+>>>>>>> 79230c9be5df48f192662e0f212a131e9b29d2cb
           <Key>
             <PropertyRef Name="id" />
           </Key>
@@ -466,7 +470,11 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_ComprasDetalle">
+<<<<<<< HEAD
           <End Role="Producto" Type="LabRestaurantModel.Platillos" Multiplicity="1" />
+=======
+          <End Role="Producto" Type="LabRestaurantModel.platillo" Multiplicity="1" />
+>>>>>>> 79230c9be5df48f192662e0f212a131e9b29d2cb
           <End Role="VentaDetalle" Type="Self.VentaDetalle" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Producto">
@@ -478,7 +486,11 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_venta_Producto">
+<<<<<<< HEAD
           <End Role="Producto" Type="LabRestaurantModel.Platillos" Multiplicity="1" />
+=======
+          <End Role="Producto" Type="LabRestaurantModel.platillo" Multiplicity="1" />
+>>>>>>> 79230c9be5df48f192662e0f212a131e9b29d2cb
           <End Role="Venta" Type="Self.Venta" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Producto">
@@ -507,7 +519,11 @@
           <EntitySet Name="CompraDetalle" EntityType="Self.CompraDetalle" />
           <EntitySet Name="Empleado" EntityType="Self.Empleado" />
           <EntitySet Name="Insumo" EntityType="Self.Insumo" />
+<<<<<<< HEAD
           <EntitySet Name="Producto" EntityType="LabRestaurantModel.Platillos" />
+=======
+          <EntitySet Name="Producto" EntityType="LabRestaurantModel.platillo" />
+>>>>>>> 79230c9be5df48f192662e0f212a131e9b29d2cb
           <EntitySet Name="Proveedor" EntityType="Self.Proveedor" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" />
           <EntitySet Name="Venta" EntityType="Self.Venta" />
@@ -660,7 +676,11 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Producto">
+<<<<<<< HEAD
             <EntityTypeMapping TypeName="LabRestaurantModel.Platillos">
+=======
+            <EntityTypeMapping TypeName="LabRestaurantModel.platillo">
+>>>>>>> 79230c9be5df48f192662e0f212a131e9b29d2cb
               <MappingFragment StoreEntitySet="Producto">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="codigo" ColumnName="codigo" />

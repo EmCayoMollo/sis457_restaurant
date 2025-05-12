@@ -133,6 +133,16 @@ namespace CpRestaurant.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dining_50dp_000000_FILL1_wght400_GRAD0_opsz48 {
+            get {
+                object obj = ResourceManager.GetObject("dining_50dp_000000_FILL1_wght400_GRAD0_opsz48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gratis_png_icono_de_perfil_icono {
             get {
                 object obj = ResourceManager.GetObject("gratis-png-icono-de-perfil-icono", resourceCulture);
@@ -156,6 +166,46 @@ namespace CpRestaurant.Properties {
         internal static System.Drawing.Bitmap login_50dp_000000_FILL0_wght500_GRAD0_opsz48 {
             get {
                 object obj = ResourceManager.GetObject("login_50dp_000000_FILL0_wght500_GRAD0_opsz48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap menu_50dp_000000_FILL1_wght400_GRAD0_opsz48 {
+            get {
+                object obj = ResourceManager.GetObject("menu_50dp_000000_FILL1_wght400_GRAD0_opsz48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap person_50dp_000000_FILL1_wght400_GRAD0_opsz48 {
+            get {
+                object obj = ResourceManager.GetObject("person_50dp_000000_FILL1_wght400_GRAD0_opsz48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap quick_reference_all_50dp_000000_FILL1_wght400_GRAD0_opsz48 {
+            get {
+                object obj = ResourceManager.GetObject("quick_reference_all_50dp_000000_FILL1_wght400_GRAD0_opsz48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shopping_cart_50dp_000000_FILL1_wght400_GRAD0_opsz48 {
+            get {
+                object obj = ResourceManager.GetObject("shopping_cart_50dp_000000_FILL1_wght400_GRAD0_opsz48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

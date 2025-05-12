@@ -15,6 +15,7 @@ namespace CadRestaurant
 using System;
     using System.Collections.Generic;
     
+<<<<<<< HEAD
 public partial class VentaDetalle
 {
 
@@ -44,4 +45,21 @@ public partial class VentaDetalle
 
 }
 
+=======
+    public partial class VentaDetalle
+    {
+        public int id { get; set; }
+        public int idVenta { get; set; }
+        public int idProducto { get; set; }
+        public decimal cantidad { get; set; }
+        public decimal precioUnitario { get; set; }
+        public decimal total { get; set; }
+        public string usuarioRegistro { get; set; }
+        public System.DateTime fechaRegistro { get; set; }
+        public short estado { get; set; }
+    
+        public virtual platillo Producto { get; set; }
+        public virtual Venta Venta { get; set; }
+    }
+>>>>>>> 79230c9be5df48f192662e0f212a131e9b29d2cb
 }

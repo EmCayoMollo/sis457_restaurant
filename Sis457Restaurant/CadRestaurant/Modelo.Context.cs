@@ -26,7 +26,57 @@ public partial class LabRestaurantEntities : DbContext
     public LabRestaurantEntities()
         : base("name=LabRestaurantEntities")
     {
+<<<<<<< HEAD
 
+=======
+        public LabRestaurantEntities()
+            : base("name=LabRestaurantEntities")
+        {
+        }
+    
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            throw new UnintentionalCodeFirstException();
+        }
+    
+        public virtual DbSet<Cliente> Cliente { get; set; }
+        public virtual DbSet<Compra> Compra { get; set; }
+        public virtual DbSet<CompraDetalle> CompraDetalle { get; set; }
+        public virtual DbSet<Empleado> Empleado { get; set; }
+        public virtual DbSet<Insumo> Insumo { get; set; }
+        public virtual DbSet<platillo> Producto { get; set; }
+        public virtual DbSet<Proveedor> Proveedor { get; set; }
+        public virtual DbSet<Usuario> Usuario { get; set; }
+        public virtual DbSet<Venta> Venta { get; set; }
+        public virtual DbSet<VentaDetalle> VentaDetalle { get; set; }
+    
+        public virtual ObjectResult<paClienteListar_Result> paClienteListar(string parametro)
+        {
+            var parametroParameter = parametro != null ?
+                new ObjectParameter("parametro", parametro) :
+                new ObjectParameter("parametro", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paClienteListar_Result>("paClienteListar", parametroParameter);
+        }
+    
+        public virtual ObjectResult<paEmpleadoListar_Result> paEmpleadoListar(string parametro)
+        {
+            var parametroParameter = parametro != null ?
+                new ObjectParameter("parametro", parametro) :
+                new ObjectParameter("parametro", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paEmpleadoListar_Result>("paEmpleadoListar", parametroParameter);
+        }
+    
+        public virtual ObjectResult<paProductoListar_Result> paProductoListar(string parametro)
+        {
+            var parametroParameter = parametro != null ?
+                new ObjectParameter("parametro", parametro) :
+                new ObjectParameter("parametro", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paProductoListar_Result>("paProductoListar", parametroParameter);
+        }
+>>>>>>> 79230c9be5df48f192662e0f212a131e9b29d2cb
     }
 
     protected override void OnModelCreating(DbModelBuilder modelBuilder)

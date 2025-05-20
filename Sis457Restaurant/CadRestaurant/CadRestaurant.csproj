@@ -92,11 +92,7 @@
     <Compile Include="paProductoListar_Result.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="Platillos.cs">
-=======
-    <Compile Include="platillo.cs">
->>>>>>> 79230c9be5df48f192662e0f212a131e9b29d2cb
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -73,9 +73,59 @@ namespace CpRestaurant.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_circle_40dp_000000_FILL1_wght400_GRAD0_opsz40 {
+            get {
+                object obj = ResourceManager.GetObject("add_circle_40dp_000000_FILL1_wght400_GRAD0_opsz40", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cancel_40dp_000000_FILL1_wght400_GRAD0_opsz40 {
+            get {
+                object obj = ResourceManager.GetObject("cancel_40dp_000000_FILL1_wght400_GRAD0_opsz40", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap close_50dp_000000_FILL0_wght500_GRAD0_opsz48 {
             get {
                 object obj = ResourceManager.GetObject("close_50dp_000000_FILL0_wght500_GRAD0_opsz48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap close_50dp_000000_FILL0_wght500_GRAD0_opsz481 {
+            get {
+                object obj = ResourceManager.GetObject("close_50dp_000000_FILL0_wght500_GRAD0_opsz481", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete_40dp_000000_FILL1_wght400_GRAD0_opsz40 {
+            get {
+                object obj = ResourceManager.GetObject("delete_40dp_000000_FILL1_wght400_GRAD0_opsz40", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edit_40dp_000000_FILL1_wght400_GRAD0_opsz40 {
+            get {
+                object obj = ResourceManager.GetObject("edit_40dp_000000_FILL1_wght400_GRAD0_opsz40", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,6 +146,26 @@ namespace CpRestaurant.Properties {
         internal static System.Drawing.Bitmap login_50dp_000000_FILL0_wght500_GRAD0_opsz48 {
             get {
                 object obj = ResourceManager.GetObject("login_50dp_000000_FILL0_wght500_GRAD0_opsz48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap save_40dp_000000_FILL1_wght400_GRAD0_opsz40 {
+            get {
+                object obj = ResourceManager.GetObject("save_40dp_000000_FILL1_wght400_GRAD0_opsz40", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search_40dp_000000_FILL1_wght400_GRAD0_opsz40 {
+            get {
+                object obj = ResourceManager.GetObject("search_40dp_000000_FILL1_wght400_GRAD0_opsz40", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

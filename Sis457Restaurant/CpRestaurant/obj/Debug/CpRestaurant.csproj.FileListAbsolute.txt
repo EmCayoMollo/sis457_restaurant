@@ -21,3 +21,11 @@ C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug
 C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.pdb
 C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.exe.config
 C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.FrmPrincipal.resources
+C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\CpRestaurant\bin\Debug\C1.Win.4.dll
+C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\CpRestaurant\bin\Debug\C1.Win.C1Command.4.dll
+C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\CpRestaurant\bin\Debug\C1.Win.C1Input.4.dll
+C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\CpRestaurant\bin\Debug\C1.Win.4.xml
+C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\CpRestaurant\bin\Debug\C1.Win.C1Command.4.xml
+C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\CpRestaurant\bin\Debug\C1.Win.C1Input.4.xml
+C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.FrmPlatillo.resources
+C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.exe.licenses

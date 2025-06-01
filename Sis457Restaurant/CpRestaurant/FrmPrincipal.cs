@@ -16,5 +16,10 @@ namespace CpRestaurant
 		{
 			InitializeComponent();
 		}
+
+		private void c1Button1_Click(object sender, EventArgs e)
+		{
+			new FrmPlatillo().ShowDialog();
+		}
 	}
 }

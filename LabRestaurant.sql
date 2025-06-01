@@ -15,7 +15,7 @@ ALTER ROLE [db_owner] ADD MEMBER [usrrest]
 GO
 
 drop database LabRestaurant
-DROP TABLE Platillos;
+DROP TABLE Platillo;
 DROP TABLE Empleado;
 DROP TABLE Usuario;
 DROP TABLE Proveedor;
@@ -25,7 +25,7 @@ DROP TABLE Venta;
 DROP TABLE CompraDetalle;
 DROP TABLE VentaDetalle;
 
-CREATE TABLE Platillos(
+CREATE TABLE Platillo(
     id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
     codigo VARCHAR(10) NOT NULL,
     nombre VARCHAR(30) NOT NULL,
@@ -191,10 +191,10 @@ INSERT INTO Platillos(codigo, nombre, precio)
 VALUES ('VE004', 'Mondongo', 25);
 
 INSERT INTO Empleado(cedulaIdentidad, nombres, primerApellido, segundoApellido, direccion, celular, cargo)
-VALUES ('123457', 'Alex', 'Arias', 'López', 'Calle Loa 50', 16767676, 'Limpieza');
+VALUES ('123457', 'Alex', 'Arias', 'Lï¿½pez', 'Calle Loa 50', 16767676, 'Limpieza');
 
 INSERT INTO Empleado(cedulaIdentidad, nombres, primerApellido, segundoApellido, direccion, celular, cargo)
-VALUES ('123456', 'Juan', 'Pérez', 'López', 'Calle Loa 50', 76767676, 'Cajero');
+VALUES ('123456', 'Juan', 'Pï¿½rez', 'Lï¿½pez', 'Calle Loa 50', 76767676, 'Cajero');
 
 INSERT INTO Usuario(idEmpleado, usuario, clave)
 VALUES (1, 'jperez', 'i0hcoO/nssY6WOs9pOp5Xw==');

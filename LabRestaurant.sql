@@ -83,10 +83,10 @@ CREATE TABLE Compra (
 
 CREATE TABLE Venta(
   id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
-  idPlatillos INT NOT NULL,
+  idPlatillo INT NOT NULL,
   transaccion int NOT NULL,
   fecha DATE NOT NULL DEFAULT GETDATE(),
-  CONSTRAINT fk_venta_Platillos FOREIGN KEY(idPlatillos) REFERENCES Platillos(id)
+  CONSTRAINT fk_venta_Platillo FOREIGN KEY(idPlatillo) REFERENCES Platillo(id)
 );
 
 CREATE TABLE CompraDetalle (
@@ -103,12 +103,13 @@ CREATE TABLE CompraDetalle (
 CREATE TABLE VentaDetalle (
   id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
   idVenta INT NOT NULL,
-  idPlatillos INT NOT NULL,
+  idPlatillo INT NOT NULL,
+  descripcion varchar(50) not null,
   cantidad DECIMAL NOT NULL CHECK (cantidad > 0),
   precioUnitario DECIMAL NOT NULL,
   total DECIMAL NOT NULL,
   CONSTRAINT fk_CompresDetalle FOREIGN KEY (idVenta) REFERENCES Venta(id),
-  CONSTRAINT fk_ComprasDetalle FOREIGN KEY (idPlatillos) REFERENCES Platillos(id)
+  CONSTRAINT fk_ComprasDetalle FOREIGN KEY (idPlatillo) REFERENCES Platillo(id)
 );
 
 ALTER TABLE Cliente ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
@@ -127,9 +128,9 @@ ALTER TABLE VentaDetalle ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_
 ALTER TABLE VentaDetalle ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
 ALTER TABLE VentaDetalle ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Eliminado, 0: Inactivo, 1: Activo
 
-ALTER TABLE Platillos ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
-ALTER TABLE Platillos ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
-ALTER TABLE Platillos ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Eliminado, 0: Inactivo, 1: Activo
+ALTER TABLE Platillo ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
+ALTER TABLE Platillo ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
+ALTER TABLE Platillo ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Eliminado, 0: Inactivo, 1: Activo
 
 ALTER TABLE Proveedor ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
 ALTER TABLE Proveedor ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
@@ -154,9 +155,9 @@ ALTER TABLE CompraDetalle ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Elimina
 GO
 
 
-create PROC paPlatillosListar @parametro VARCHAR(100)
+create PROC paPlatilloListar @parametro VARCHAR(100)
 AS
-  SELECT * FROM Platillos
+  SELECT * FROM Platillo
   WHERE estado<>-1 and codigo+nombre LIKE '%'+REPLACE(@parametro, ' ', '%')+'%'
   ORDER BY estado desc, nombre asc;
 GO
@@ -175,26 +176,34 @@ AS
   WHERE estado<>-1 and ci+nombreCompleto LIKE '%'+REPLACE(@parametro, ' ', '%')+'%'
   ORDER BY estado desc, nombreCompleto asc;
 GO
+
+create proc paVentaListar @parametro varchar(100)
+as
+ select*from VentaDetalle
+ where estado <>-1 and descripcion like '%'+REPLACE(@parametro, ' ', '%')+'%'
+ order by estado desc, descripcion desc;
+ go
+
 EXEC paPlatillosListar '';
 EXEC paEmpleadoListar '';
 
-INSERT INTO Platillos(codigo, nombre, precio)
+INSERT INTO Platillo(codigo, nombre, precio)
 VALUES ('AL001', 'Picante de Pollo',15);
 
-INSERT INTO Platillos(codigo, nombre, precio)
+INSERT INTO Platillo(codigo, nombre, precio)
 VALUES ('CA002', 'Majadito',15);
 
-INSERT INTO Platillos(codigo, nombre, precio)
+INSERT INTO Platillo(codigo, nombre, precio)
 VALUES ('PO003', 'Parrillada', 20);
 
-INSERT INTO Platillos(codigo, nombre, precio)
+INSERT INTO Platillo(codigo, nombre, precio)
 VALUES ('VE004', 'Mondongo', 25);
 
 INSERT INTO Empleado(cedulaIdentidad, nombres, primerApellido, segundoApellido, direccion, celular, cargo)
 VALUES ('123457', 'Alex', 'Arias', 'L�pez', 'Calle Loa 50', 16767676, 'Limpieza');
 
 INSERT INTO Empleado(cedulaIdentidad, nombres, primerApellido, segundoApellido, direccion, celular, cargo)
-VALUES ('123456', 'Juan', 'P�rez', 'L�pez', 'Calle Loa 50', 76767676, 'Cajero');
+VALUES ('123456', 'Juan', 'Perez', 'Lopez', 'Calle Loa 50', 76767676, 'Cajero');
 
 INSERT INTO Usuario(idEmpleado, usuario, clave)
 VALUES (1, 'jperez', 'i0hcoO/nssY6WOs9pOp5Xw==');

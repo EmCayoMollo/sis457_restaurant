@@ -1,0 +1,89 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A7AEEA7B-E5D8-41F9-B96A-C0F6EF4AB844}|CpRestaurant\\CpRestaurant.csproj|c:\\users\\edzon\\desktop\\sis457_restaurant\\sis457restaurant\\cprestaurant\\autenticacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A7AEEA7B-E5D8-41F9-B96A-C0F6EF4AB844}|CpRestaurant\\CpRestaurant.csproj|solutionrelative:cprestaurant\\autenticacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7AEEA7B-E5D8-41F9-B96A-C0F6EF4AB844}|CpRestaurant\\CpRestaurant.csproj|c:\\users\\edzon\\desktop\\sis457_restaurant\\sis457restaurant\\cprestaurant\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A7AEEA7B-E5D8-41F9-B96A-C0F6EF4AB844}|CpRestaurant\\CpRestaurant.csproj|solutionrelative:cprestaurant\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7AEEA7B-E5D8-41F9-B96A-C0F6EF4AB844}|CpRestaurant\\CpRestaurant.csproj|c:\\users\\edzon\\desktop\\sis457_restaurant\\sis457restaurant\\cprestaurant\\autenticacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7AEEA7B-E5D8-41F9-B96A-C0F6EF4AB844}|CpRestaurant\\CpRestaurant.csproj|solutionrelative:cprestaurant\\autenticacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Autenticacion.cs",
+              "DocumentMoniker": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\CpRestaurant\\Autenticacion.cs",
+              "RelativeDocumentMoniker": "CpRestaurant\\Autenticacion.cs",
+              "ToolTip": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\CpRestaurant\\Autenticacion.cs",
+              "RelativeToolTip": "CpRestaurant\\Autenticacion.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAawEIAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T18:28:05.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Autenticacion.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\CpRestaurant\\Autenticacion.cs",
+              "RelativeDocumentMoniker": "CpRestaurant\\Autenticacion.cs",
+              "ToolTip": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\CpRestaurant\\Autenticacion.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CpRestaurant\\Autenticacion.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T17:47:54.048Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrmPrincipal.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\CpRestaurant\\FrmPrincipal.cs",
+              "RelativeDocumentMoniker": "CpRestaurant\\FrmPrincipal.cs",
+              "ToolTip": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\CpRestaurant\\FrmPrincipal.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CpRestaurant\\FrmPrincipal.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T18:15:31.23Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

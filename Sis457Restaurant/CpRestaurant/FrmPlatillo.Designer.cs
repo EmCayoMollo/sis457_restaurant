@@ -30,33 +30,33 @@
 		{
 			this.components = new System.ComponentModel.Container();
 			this.gbxDatos = new System.Windows.Forms.GroupBox();
+			this.nudPrecio = new System.Windows.Forms.NumericUpDown();
+			this.label1 = new System.Windows.Forms.Label();
+			this.btnCancelar = new System.Windows.Forms.Button();
+			this.btnGuardar = new System.Windows.Forms.Button();
 			this.txtNombre = new System.Windows.Forms.TextBox();
 			this.lblDescripcion = new System.Windows.Forms.Label();
 			this.txtCodigo = new System.Windows.Forms.TextBox();
 			this.lblCodigo = new System.Windows.Forms.Label();
 			this.pnlAcciones = new System.Windows.Forms.Panel();
+			this.btnCerrar = new System.Windows.Forms.Button();
+			this.btnEliminar = new System.Windows.Forms.Button();
+			this.btnEditar = new System.Windows.Forms.Button();
+			this.btnNuevo = new System.Windows.Forms.Button();
 			this.gbxLista = new System.Windows.Forms.GroupBox();
 			this.dgvLista = new System.Windows.Forms.DataGridView();
 			this.txtParametro = new System.Windows.Forms.TextBox();
 			this.lblParametro = new System.Windows.Forms.Label();
 			this.lblTitulo = new System.Windows.Forms.Label();
-			this.btnCancelar = new System.Windows.Forms.Button();
-			this.btnGuardar = new System.Windows.Forms.Button();
-			this.btnCerrar = new System.Windows.Forms.Button();
-			this.btnEliminar = new System.Windows.Forms.Button();
-			this.btnEditar = new System.Windows.Forms.Button();
-			this.btnNuevo = new System.Windows.Forms.Button();
 			this.btnBuscar = new System.Windows.Forms.Button();
-			this.label1 = new System.Windows.Forms.Label();
-			this.nudPrecio = new System.Windows.Forms.NumericUpDown();
 			this.erpCodigo = new System.Windows.Forms.ErrorProvider(this.components);
 			this.erpNombre = new System.Windows.Forms.ErrorProvider(this.components);
 			this.erpPrecio = new System.Windows.Forms.ErrorProvider(this.components);
 			this.gbxDatos.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.nudPrecio)).BeginInit();
 			this.pnlAcciones.SuspendLayout();
 			this.gbxLista.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.nudPrecio)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.erpCodigo)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.erpNombre)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.erpPrecio)).BeginInit();
@@ -78,6 +78,50 @@
 			this.gbxDatos.TabIndex = 13;
 			this.gbxDatos.TabStop = false;
 			this.gbxDatos.Text = "Datos";
+			// 
+			// nudPrecio
+			// 
+			this.nudPrecio.Location = new System.Drawing.Point(134, 73);
+			this.nudPrecio.Name = "nudPrecio";
+			this.nudPrecio.Size = new System.Drawing.Size(194, 20);
+			this.nudPrecio.TabIndex = 13;
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Location = new System.Drawing.Point(70, 80);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(40, 13);
+			this.label1.TabIndex = 12;
+			this.label1.Text = "Precio:";
+			// 
+			// btnCancelar
+			// 
+			this.btnCancelar.Image = global::CpRestaurant.Properties.Resources.cancel_40dp_000000_FILL1_wght400_GRAD0_opsz40;
+			this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnCancelar.Location = new System.Drawing.Point(652, 32);
+			this.btnCancelar.Name = "btnCancelar";
+			this.btnCancelar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+			this.btnCancelar.Size = new System.Drawing.Size(111, 40);
+			this.btnCancelar.TabIndex = 11;
+			this.btnCancelar.Text = "Cancelar";
+			this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.btnCancelar.UseVisualStyleBackColor = true;
+			this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+			// 
+			// btnGuardar
+			// 
+			this.btnGuardar.Image = global::CpRestaurant.Properties.Resources.save_40dp_000000_FILL1_wght400_GRAD0_opsz40;
+			this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnGuardar.Location = new System.Drawing.Point(541, 32);
+			this.btnGuardar.Name = "btnGuardar";
+			this.btnGuardar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+			this.btnGuardar.Size = new System.Drawing.Size(105, 40);
+			this.btnGuardar.TabIndex = 10;
+			this.btnGuardar.Text = "Guardar";
+			this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+			this.btnGuardar.UseVisualStyleBackColor = true;
+			this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
 			// 
 			// txtNombre
 			// 
@@ -124,86 +168,6 @@
 			this.pnlAcciones.Name = "pnlAcciones";
 			this.pnlAcciones.Size = new System.Drawing.Size(795, 47);
 			this.pnlAcciones.TabIndex = 12;
-			// 
-			// gbxLista
-			// 
-			this.gbxLista.Controls.Add(this.dgvLista);
-			this.gbxLista.Location = new System.Drawing.Point(5, 90);
-			this.gbxLista.Name = "gbxLista";
-			this.gbxLista.Size = new System.Drawing.Size(795, 179);
-			this.gbxLista.TabIndex = 11;
-			this.gbxLista.TabStop = false;
-			this.gbxLista.Text = "Lista de Platillos";
-			// 
-			// dgvLista
-			// 
-			this.dgvLista.AllowUserToAddRows = false;
-			this.dgvLista.AllowUserToDeleteRows = false;
-			this.dgvLista.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-			this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgvLista.Location = new System.Drawing.Point(6, 21);
-			this.dgvLista.Name = "dgvLista";
-			this.dgvLista.ReadOnly = true;
-			this.dgvLista.RowHeadersWidth = 62;
-			this.dgvLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.dgvLista.Size = new System.Drawing.Size(783, 150);
-			this.dgvLista.TabIndex = 0;
-			// 
-			// txtParametro
-			// 
-			this.txtParametro.Location = new System.Drawing.Point(5, 62);
-			this.txtParametro.MaxLength = 100;
-			this.txtParametro.Name = "txtParametro";
-			this.txtParametro.Size = new System.Drawing.Size(680, 20);
-			this.txtParametro.TabIndex = 9;
-			this.txtParametro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtParametro_KeyPress);
-			// 
-			// lblParametro
-			// 
-			this.lblParametro.AutoSize = true;
-			this.lblParametro.Location = new System.Drawing.Point(5, 43);
-			this.lblParametro.Name = "lblParametro";
-			this.lblParametro.Size = new System.Drawing.Size(162, 13);
-			this.lblParametro.TabIndex = 8;
-			this.lblParametro.Text = "Buscar por Código o Descripción";
-			// 
-			// lblTitulo
-			// 
-			this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblTitulo.Location = new System.Drawing.Point(0, 12);
-			this.lblTitulo.Name = "lblTitulo";
-			this.lblTitulo.Size = new System.Drawing.Size(800, 31);
-			this.lblTitulo.TabIndex = 7;
-			this.lblTitulo.Text = "Platillos";
-			this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// btnCancelar
-			// 
-			this.btnCancelar.Image = global::CpRestaurant.Properties.Resources.cancel_40dp_000000_FILL1_wght400_GRAD0_opsz40;
-			this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnCancelar.Location = new System.Drawing.Point(652, 32);
-			this.btnCancelar.Name = "btnCancelar";
-			this.btnCancelar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-			this.btnCancelar.Size = new System.Drawing.Size(111, 40);
-			this.btnCancelar.TabIndex = 11;
-			this.btnCancelar.Text = "Cancelar";
-			this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btnCancelar.UseVisualStyleBackColor = true;
-			this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-			// 
-			// btnGuardar
-			// 
-			this.btnGuardar.Image = global::CpRestaurant.Properties.Resources.save_40dp_000000_FILL1_wght400_GRAD0_opsz40;
-			this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnGuardar.Location = new System.Drawing.Point(541, 32);
-			this.btnGuardar.Name = "btnGuardar";
-			this.btnGuardar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-			this.btnGuardar.Size = new System.Drawing.Size(105, 40);
-			this.btnGuardar.TabIndex = 10;
-			this.btnGuardar.Text = "Guardar";
-			this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-			this.btnGuardar.UseVisualStyleBackColor = true;
-			this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
 			// 
 			// btnCerrar
 			// 
@@ -261,6 +225,58 @@
 			this.btnNuevo.UseVisualStyleBackColor = true;
 			this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
 			// 
+			// gbxLista
+			// 
+			this.gbxLista.Controls.Add(this.dgvLista);
+			this.gbxLista.Location = new System.Drawing.Point(5, 90);
+			this.gbxLista.Name = "gbxLista";
+			this.gbxLista.Size = new System.Drawing.Size(795, 179);
+			this.gbxLista.TabIndex = 11;
+			this.gbxLista.TabStop = false;
+			this.gbxLista.Text = "Lista de Platillos";
+			// 
+			// dgvLista
+			// 
+			this.dgvLista.AllowUserToAddRows = false;
+			this.dgvLista.AllowUserToDeleteRows = false;
+			this.dgvLista.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+			this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgvLista.Location = new System.Drawing.Point(6, 21);
+			this.dgvLista.Name = "dgvLista";
+			this.dgvLista.ReadOnly = true;
+			this.dgvLista.RowHeadersWidth = 62;
+			this.dgvLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+			this.dgvLista.Size = new System.Drawing.Size(783, 150);
+			this.dgvLista.TabIndex = 0;
+			// 
+			// txtParametro
+			// 
+			this.txtParametro.Location = new System.Drawing.Point(5, 62);
+			this.txtParametro.MaxLength = 100;
+			this.txtParametro.Name = "txtParametro";
+			this.txtParametro.Size = new System.Drawing.Size(680, 20);
+			this.txtParametro.TabIndex = 9;
+			this.txtParametro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtParametro_KeyPress);
+			// 
+			// lblParametro
+			// 
+			this.lblParametro.AutoSize = true;
+			this.lblParametro.Location = new System.Drawing.Point(5, 43);
+			this.lblParametro.Name = "lblParametro";
+			this.lblParametro.Size = new System.Drawing.Size(162, 13);
+			this.lblParametro.TabIndex = 8;
+			this.lblParametro.Text = "Buscar por Código o Descripción";
+			// 
+			// lblTitulo
+			// 
+			this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblTitulo.Location = new System.Drawing.Point(0, 12);
+			this.lblTitulo.Name = "lblTitulo";
+			this.lblTitulo.Size = new System.Drawing.Size(800, 31);
+			this.lblTitulo.TabIndex = 7;
+			this.lblTitulo.Text = "Platillos";
+			this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
 			// btnBuscar
 			// 
 			this.btnBuscar.Image = global::CpRestaurant.Properties.Resources.search_40dp_000000_FILL1_wght400_GRAD0_opsz40;
@@ -274,22 +290,6 @@
 			this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 			this.btnBuscar.UseVisualStyleBackColor = true;
 			this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(70, 80);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(40, 13);
-			this.label1.TabIndex = 12;
-			this.label1.Text = "Precio:";
-			// 
-			// nudPrecio
-			// 
-			this.nudPrecio.Location = new System.Drawing.Point(134, 73);
-			this.nudPrecio.Name = "nudPrecio";
-			this.nudPrecio.Size = new System.Drawing.Size(194, 20);
-			this.nudPrecio.TabIndex = 13;
 			// 
 			// erpCodigo
 			// 
@@ -322,10 +322,10 @@
 			this.Load += new System.EventHandler(this.FrmPlatillo_Load);
 			this.gbxDatos.ResumeLayout(false);
 			this.gbxDatos.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.nudPrecio)).EndInit();
 			this.pnlAcciones.ResumeLayout(false);
 			this.gbxLista.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dgvLista)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.nudPrecio)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.erpCodigo)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.erpNombre)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.erpPrecio)).EndInit();

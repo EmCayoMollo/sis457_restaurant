@@ -123,6 +123,16 @@ namespace CpRestaurant.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dining_50dp_000000_FILL1_wght400_GRAD0_opsz48 {
+            get {
+                object obj = ResourceManager.GetObject("dining_50dp_000000_FILL1_wght400_GRAD0_opsz48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap edit_40dp_000000_FILL1_wght400_GRAD0_opsz40 {
             get {
                 object obj = ResourceManager.GetObject("edit_40dp_000000_FILL1_wght400_GRAD0_opsz40", resourceCulture);
@@ -146,6 +156,37 @@ namespace CpRestaurant.Properties {
         internal static System.Drawing.Bitmap login_50dp_000000_FILL0_wght500_GRAD0_opsz48 {
             get {
                 object obj = ResourceManager.GetObject("login_50dp_000000_FILL0_wght500_GRAD0_opsz48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nutrition_40dp_000000_FILL1_wght400_GRAD0_opsz40 {
+            get {
+                object obj = ResourceManager.GetObject("nutrition_40dp_000000_FILL1_wght400_GRAD0_opsz40", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap person_50dp_000000_FILL1_wght400_GRAD0_opsz48 {
+            get {
+                object obj = ResourceManager.GetObject("person_50dp_000000_FILL1_wght400_GRAD0_opsz48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plana_laicos_pollo_al_horno_y_rodajas_de_naranja_en_un_plato_con_cubiertos_y_bloc_de_notas_en_blanco {
+            get {
+                object obj = ResourceManager.GetObject("plana-laicos-pollo-al-horno-y-rodajas-de-naranja-en-un-plato-con-cubiertos-y-bloc" +
+                        "-de-notas-en-blanco", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

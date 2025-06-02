@@ -37,8 +37,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="C1.Win.4, Version=4.0.20193.393, Culture=neutral, PublicKeyToken=944ae1ea0e47ca04" />
+    <Reference Include="C1.Win.4.5.2, Version=4.5.20193.393, Culture=neutral, PublicKeyToken=944ae1ea0e47ca04" />
     <Reference Include="C1.Win.C1Command.4, Version=4.0.20193.393, Culture=neutral, PublicKeyToken=e808566f358766d8" />
+    <Reference Include="C1.Win.C1Command.4.5.2, Version=4.5.20193.393, Culture=neutral, PublicKeyToken=e808566f358766d8" />
     <Reference Include="C1.Win.C1Input.4, Version=4.0.20193.393, Culture=neutral, PublicKeyToken=7e7ff60f0c214f9a, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1Input.4.5.2, Version=4.5.20193.393, Culture=neutral, PublicKeyToken=7e7ff60f0c214f9a, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1Ribbon.4, Version=4.0.20193.393, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -49,6 +53,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -157,6 +162,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cancel_40dp_000000_FILL1_wght400_GRAD0_opsz40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_50dp_000000_FILL1_wght400_GRAD0_opsz48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dining_50dp_000000_FILL1_wght400_GRAD0_opsz48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nutrition_40dp_000000_FILL1_wght400_GRAD0_opsz40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plana-laicos-pollo-al-horno-y-rodajas-de-naranja-en-un-plato-con-cubiertos-y-bloc-de-notas-en-blanco.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -31,5 +31,10 @@ namespace CpRestaurant
 		{
 			new FrmCliente().ShowDialog();
 		}
+
+		private void btnVenta_Click(object sender, EventArgs e)
+		{
+			new FrmVenta().ShowDialog();
+		}
 	}
 }

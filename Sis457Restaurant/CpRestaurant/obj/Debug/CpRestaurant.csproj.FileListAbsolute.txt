@@ -39,3 +39,4 @@ C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\CpRestaurant\bin\Debug
 C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\CpRestaurant\bin\Debug\C1.Win.C1Ribbon.4.xml
 C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.FrmEmpleado.resources
 C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.FrmCliente.resources
+C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\CpRestaurant\obj\Debug\CpRestaurant.FrmVenta.resources

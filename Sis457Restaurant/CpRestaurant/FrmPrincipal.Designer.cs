@@ -38,16 +38,16 @@
 			this.ribbonGroup1 = new C1.Win.C1Ribbon.RibbonGroup();
 			this.btnEmpleado = new C1.Win.C1Ribbon.RibbonButton();
 			this.ribbonButton2 = new C1.Win.C1Ribbon.RibbonButton();
+			this.btnClientes = new C1.Win.C1Ribbon.RibbonButton();
 			this.ribbonTab2 = new C1.Win.C1Ribbon.RibbonTab();
 			this.ribbonGroup2 = new C1.Win.C1Ribbon.RibbonGroup();
 			this.btnPlatillos = new C1.Win.C1Ribbon.RibbonButton();
 			this.ribbonButton4 = new C1.Win.C1Ribbon.RibbonButton();
 			this.ribbonTab3 = new C1.Win.C1Ribbon.RibbonTab();
 			this.ribbonGroup3 = new C1.Win.C1Ribbon.RibbonGroup();
-			this.ribbonButton3 = new C1.Win.C1Ribbon.RibbonButton();
+			this.btnVenta = new C1.Win.C1Ribbon.RibbonButton();
 			this.ribbonTopToolBar1 = new C1.Win.C1Ribbon.RibbonTopToolBar();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
-			this.btnClientes = new C1.Win.C1Ribbon.RibbonButton();
 			((System.ComponentModel.ISupportInitialize)(this.c1Ribbon1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
@@ -111,6 +111,14 @@
 			this.ribbonButton2.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton2.SmallImage")));
 			this.ribbonButton2.Text = "Usuario";
 			// 
+			// btnClientes
+			// 
+			this.btnClientes.LargeImage = global::CpRestaurant.Properties.Resources.person_50dp_000000_FILL1_wght400_GRAD0_opsz48;
+			this.btnClientes.Name = "btnClientes";
+			this.btnClientes.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnClientes.SmallImage")));
+			this.btnClientes.Text = "Clientes";
+			this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
+			// 
 			// ribbonTab2
 			// 
 			this.ribbonTab2.Groups.Add(this.ribbonGroup2);
@@ -147,16 +155,17 @@
 			// 
 			// ribbonGroup3
 			// 
-			this.ribbonGroup3.Items.Add(this.ribbonButton3);
+			this.ribbonGroup3.Items.Add(this.btnVenta);
 			this.ribbonGroup3.Name = "ribbonGroup3";
-			this.ribbonGroup3.Text = "Compra?Venta";
+			this.ribbonGroup3.Text = "Compra/Venta";
 			// 
-			// ribbonButton3
+			// btnVenta
 			// 
-			this.ribbonButton3.LargeImage = global::CpRestaurant.Properties.Resources.point_of_sale_40dp_000000_FILL1_wght400_GRAD0_opsz40;
-			this.ribbonButton3.Name = "ribbonButton3";
-			this.ribbonButton3.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton3.SmallImage")));
-			this.ribbonButton3.Text = "Venta";
+			this.btnVenta.LargeImage = global::CpRestaurant.Properties.Resources.point_of_sale_40dp_000000_FILL1_wght400_GRAD0_opsz40;
+			this.btnVenta.Name = "btnVenta";
+			this.btnVenta.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnVenta.SmallImage")));
+			this.btnVenta.Text = "Venta";
+			this.btnVenta.Click += new System.EventHandler(this.btnVenta_Click);
 			// 
 			// ribbonTopToolBar1
 			// 
@@ -172,14 +181,6 @@
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.pictureBox1.TabIndex = 2;
 			this.pictureBox1.TabStop = false;
-			// 
-			// btnClientes
-			// 
-			this.btnClientes.LargeImage = global::CpRestaurant.Properties.Resources.person_50dp_000000_FILL1_wght400_GRAD0_opsz48;
-			this.btnClientes.Name = "btnClientes";
-			this.btnClientes.SmallImage = ((System.Drawing.Image)(resources.GetObject("btnClientes.SmallImage")));
-			this.btnClientes.Text = "Clientes";
-			this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
 			// 
 			// FrmPrincipal
 			// 
@@ -218,7 +219,7 @@
 		private C1.Win.C1Ribbon.RibbonButton btnPlatillos;
 		private C1.Win.C1Ribbon.RibbonButton ribbonButton4;
 		private System.Windows.Forms.PictureBox pictureBox1;
-		private C1.Win.C1Ribbon.RibbonButton ribbonButton3;
+		private C1.Win.C1Ribbon.RibbonButton btnVenta;
 		private C1.Win.C1Ribbon.RibbonButton btnClientes;
 	}
 }

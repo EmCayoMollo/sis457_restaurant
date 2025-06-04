@@ -14,12 +14,22 @@ namespace CadRestaurant
     
     public partial class Cliente
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Cliente()
+        {
+            this.Venta = new HashSet<Venta>();
+        }
+    
         public int id { get; set; }
         public string ci { get; set; }
-        public string nombreCompleto { get; set; }
-        public string razonSocial { get; set; }
+        public string nombres { get; set; }
+        public string apellidos { get; set; }
+        public long celular { get; set; }
         public string usuarioRegistro { get; set; }
         public System.DateTime fechaRegistro { get; set; }
         public short estado { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Venta> Venta { get; set; }
     }
 }

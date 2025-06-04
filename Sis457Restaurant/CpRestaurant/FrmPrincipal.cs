@@ -21,5 +21,15 @@ namespace CpRestaurant
 		{
 			new FrmPlatillo().ShowDialog();
 		}
+
+		private void btnEmpleado_Click(object sender, EventArgs e)
+		{
+			new FrmEmpleado().ShowDialog();
+		}
+
+		private void btnClientes_Click(object sender, EventArgs e)
+		{
+			new FrmCliente().ShowDialog();
+		}
 	}
 }

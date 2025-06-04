@@ -1,5 +1,5 @@
 ﻿using ClnRestaurant;
-using CpMinerva;
+using CpRestaurant;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

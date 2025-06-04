@@ -5,9 +5,10 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ci" Type="varchar" MaxLength="1" Nullable="false" />
-    <Property Name="nombreCompleto" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="razonSocial" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ci" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="nombres" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="apellidos" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="celular" Type="bigint" Nullable="false" />
     <Property Name="usuarioRegistro" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
     <Property Name="estado" Type="smallint" Nullable="false" />
@@ -109,9 +110,9 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="idPlatillo" Type="int" Nullable="false" />
-    <Property Name="transaccion" Type="int" Nullable="false" />
-    <Property Name="fecha" Type="date" Nullable="false" />
+    <Property Name="idCliente" Type="int" Nullable="false" />
+    <Property Name="idEmpleado" Type="int" Nullable="false" />
+    <Property Name="razonSocial" Type="varchar" MaxLength="100" Nullable="false" />
     <Property Name="usuarioRegistro" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="fechaRegistro" Type="datetime" Nullable="false" />
     <Property Name="estado" Type="smallint" Nullable="false" />
@@ -123,7 +124,6 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="idVenta" Type="int" Nullable="false" />
     <Property Name="idPlatillo" Type="int" Nullable="false" />
-    <Property Name="descripcion" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="cantidad" Type="decimal" Precision="18" Scale="0" Nullable="false" />
     <Property Name="precioUnitario" Type="decimal" Precision="18" Scale="0" Nullable="false" />
     <Property Name="total" Type="decimal" Precision="18" Scale="0" Nullable="false" />
@@ -155,18 +155,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="fk_ComprasDetalle">
-    <End Role="Platillo" Type="Self.Platillo" Multiplicity="1" />
-    <End Role="VentaDetalle" Type="Self.VentaDetalle" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Platillo">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="VentaDetalle">
-        <PropertyRef Name="idPlatillo" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="fk_CompreDetalle">
     <End Role="Compra" Type="Self.Compra" Multiplicity="1" />
     <End Role="CompraDetalle" Type="Self.CompraDetalle" Multiplicity="*" />
@@ -179,15 +167,15 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="fk_CompresDetalle">
-    <End Role="Venta" Type="Self.Venta" Multiplicity="1" />
+  <Association Name="fk_PlatilloDetalle">
+    <End Role="Platillo" Type="Self.Platillo" Multiplicity="1" />
     <End Role="VentaDetalle" Type="Self.VentaDetalle" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Venta">
+      <Principal Role="Platillo">
         <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="VentaDetalle">
-        <PropertyRef Name="idVenta" />
+        <PropertyRef Name="idPlatillo" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -203,15 +191,39 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="fk_venta_Platillo">
-    <End Role="Platillo" Type="Self.Platillo" Multiplicity="1" />
+  <Association Name="fk_venta_Cliente">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
     <End Role="Venta" Type="Self.Venta" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Platillo">
+      <Principal Role="Cliente">
         <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="Venta">
-        <PropertyRef Name="idPlatillo" />
+        <PropertyRef Name="idCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_venta_Empleado">
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="1" />
+    <End Role="Venta" Type="Self.Venta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empleado">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Venta">
+        <PropertyRef Name="idEmpleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_VentaDetalle">
+    <End Role="Venta" Type="Self.Venta" Multiplicity="1" />
+    <End Role="VentaDetalle" Type="Self.VentaDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Venta">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="VentaDetalle">
+        <PropertyRef Name="idVenta" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -222,6 +234,9 @@
     <Parameter Name="parametro" Type="varchar" Mode="In" />
   </Function>
   <Function Name="paPlatilloListar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="parametro" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="paVentaDetalleListar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="parametro" Type="varchar" Mode="In" />
   </Function>
   <Function Name="paVentaListar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -246,25 +261,29 @@
       <End Role="Insumo" EntitySet="Insumo" />
       <End Role="CompraDetalle" EntitySet="CompraDetalle" />
     </AssociationSet>
-    <AssociationSet Name="fk_ComprasDetalle" Association="Self.fk_ComprasDetalle">
-      <End Role="Platillo" EntitySet="Platillo" />
-      <End Role="VentaDetalle" EntitySet="VentaDetalle" />
-    </AssociationSet>
     <AssociationSet Name="fk_CompreDetalle" Association="Self.fk_CompreDetalle">
       <End Role="Compra" EntitySet="Compra" />
       <End Role="CompraDetalle" EntitySet="CompraDetalle" />
     </AssociationSet>
-    <AssociationSet Name="fk_CompresDetalle" Association="Self.fk_CompresDetalle">
-      <End Role="Venta" EntitySet="Venta" />
+    <AssociationSet Name="fk_PlatilloDetalle" Association="Self.fk_PlatilloDetalle">
+      <End Role="Platillo" EntitySet="Platillo" />
       <End Role="VentaDetalle" EntitySet="VentaDetalle" />
     </AssociationSet>
     <AssociationSet Name="fk_Usuario_Empleado" Association="Self.fk_Usuario_Empleado">
       <End Role="Empleado" EntitySet="Empleado" />
       <End Role="Usuario" EntitySet="Usuario" />
     </AssociationSet>
-    <AssociationSet Name="fk_venta_Platillo" Association="Self.fk_venta_Platillo">
-      <End Role="Platillo" EntitySet="Platillo" />
+    <AssociationSet Name="fk_venta_Cliente" Association="Self.fk_venta_Cliente">
+      <End Role="Cliente" EntitySet="Cliente" />
       <End Role="Venta" EntitySet="Venta" />
+    </AssociationSet>
+    <AssociationSet Name="fk_venta_Empleado" Association="Self.fk_venta_Empleado">
+      <End Role="Empleado" EntitySet="Empleado" />
+      <End Role="Venta" EntitySet="Venta" />
+    </AssociationSet>
+    <AssociationSet Name="fk_VentaDetalle" Association="Self.fk_VentaDetalle">
+      <End Role="Venta" EntitySet="Venta" />
+      <End Role="VentaDetalle" EntitySet="VentaDetalle" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

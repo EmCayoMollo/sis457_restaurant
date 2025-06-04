@@ -1,6 +1,6 @@
 ﻿using CadRestaurant;
 using ClnRestaurant;
-using CpMinerva;
+using CpRestaurant;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,12 +26,12 @@ namespace CpRestaurant
 			var lista = PlatilloCln.listarPa(txtParametro.Text.Trim());
 			dgvLista.DataSource = lista;
 			dgvLista.Columns["id"].Visible = false;
+			dgvLista.Columns["estado"].Visible = false;
 			dgvLista.Columns["codigo"].HeaderText = "Código";
 			dgvLista.Columns["nombre"].HeaderText = "Nombre";
 			dgvLista.Columns["precio"].HeaderText = "Precio de Venta";
 			dgvLista.Columns["usuarioRegistro"].HeaderText = "Usuario Registro";
 			dgvLista.Columns["fechaRegistro"].HeaderText = "Fecha Registro";
-			dgvLista.Columns["estado"].Visible= false;
 			if (lista.Count > 0) dgvLista.CurrentCell = dgvLista.Rows[0].Cells["codigo"];
 			btnEditar.Enabled = lista.Count > 0;
 			btnEliminar.Enabled = lista.Count > 0;

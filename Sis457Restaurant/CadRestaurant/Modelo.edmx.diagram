@@ -4,24 +4,25 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="9d46823d29d4445b9c07b8094f9edc49" Name="Diagram1">
-        <EntityTypeShape EntityType="LabRestaurantModel.Cliente" Width="1.5" PointX="5.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabRestaurantModel.Compra" Width="1.5" PointX="10" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabRestaurantModel.CompraDetalle" Width="1.5" PointX="12.25" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabRestaurantModel.Empleado" Width="1.5" PointX="0.75" PointY="8" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabRestaurantModel.Insumo" Width="1.5" PointX="10" PointY="5.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabRestaurantModel.Platillo" Width="1.5" PointX="0.75" PointY="3.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabRestaurantModel.Proveedor" Width="1.5" PointX="7.75" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabRestaurantModel.Usuario" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabRestaurantModel.Venta" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="LabRestaurantModel.VentaDetalle" Width="1.5" PointX="5.25" PointY="2.875" IsExpanded="true" />
+      <Diagram DiagramId="2fadac7e19b14fc79041d2926b82e646" Name="Diagram1">
+        <EntityTypeShape EntityType="LabRestaurantModel.Cliente" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabRestaurantModel.Compra" Width="1.5" PointX="5" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabRestaurantModel.CompraDetalle" Width="1.5" PointX="7.25" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabRestaurantModel.Empleado" Width="1.5" PointX="0.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabRestaurantModel.Insumo" Width="1.5" PointX="5" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabRestaurantModel.Platillo" Width="1.5" PointX="6" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabRestaurantModel.Proveedor" Width="1.5" PointX="2.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabRestaurantModel.Usuario" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabRestaurantModel.Venta" Width="1.5" PointX="6" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabRestaurantModel.VentaDetalle" Width="1.5" PointX="8.25" PointY="4.5" IsExpanded="true" />
+        <AssociationConnector Association="LabRestaurantModel.fk_venta_Cliente" ManuallyRouted="false" />
         <AssociationConnector Association="LabRestaurantModel.fk_Compra_Proveedor" ManuallyRouted="false" />
         <AssociationConnector Association="LabRestaurantModel.fk_CompreDetalle" ManuallyRouted="false" />
         <AssociationConnector Association="LabRestaurantModel.fk_CompraDetalle" ManuallyRouted="false" />
         <AssociationConnector Association="LabRestaurantModel.fk_Usuario_Empleado" ManuallyRouted="false" />
-        <AssociationConnector Association="LabRestaurantModel.fk_ComprasDetalle" ManuallyRouted="false" />
-        <AssociationConnector Association="LabRestaurantModel.fk_venta_Platillo" ManuallyRouted="false" />
-        <AssociationConnector Association="LabRestaurantModel.fk_CompresDetalle" ManuallyRouted="false" />
+        <AssociationConnector Association="LabRestaurantModel.fk_venta_Empleado" ManuallyRouted="false" />
+        <AssociationConnector Association="LabRestaurantModel.fk_PlatilloDetalle" ManuallyRouted="false" />
+        <AssociationConnector Association="LabRestaurantModel.fk_VentaDetalle" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

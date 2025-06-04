@@ -24,6 +24,7 @@ DROP TABLE Compra;
 DROP TABLE Venta; 
 DROP TABLE CompraDetalle;
 DROP TABLE VentaDetalle;
+DROP TABLE Cliente;
 
 CREATE TABLE Platillo(
     id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
@@ -61,9 +62,10 @@ CREATE TABLE Proveedor (
 
 CREATE TABLE Cliente(
   id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
-  ci varchar not null,
-  nombreCompleto varchar(100)not null,
-  razonSocial VARCHAR(50) not NULL
+  ci varchar(15) not null,
+  nombres varchar(100)not null,
+  apellidos varchar(100)not null,
+  celular bigint not null
 );
 
 CREATE TABLE Insumo(
@@ -83,10 +85,11 @@ CREATE TABLE Compra (
 
 CREATE TABLE Venta(
   id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
-  idPlatillo INT NOT NULL,
-  transaccion int NOT NULL,
-  fecha DATE NOT NULL DEFAULT GETDATE(),
-  CONSTRAINT fk_venta_Platillo FOREIGN KEY(idPlatillo) REFERENCES Platillo(id)
+  idCliente int not null,
+  idEmpleado int not null,
+  razonSocial varchar(100) NOT NULL,
+  CONSTRAINT fk_venta_Cliente FOREIGN KEY(idCliente) REFERENCES Cliente(id),
+  CONSTRAINT fk_venta_Empleado FOREIGN KEY(idEmpleado) REFERENCES Empleado(id)
 );
 
 CREATE TABLE CompraDetalle (
@@ -104,12 +107,11 @@ CREATE TABLE VentaDetalle (
   id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
   idVenta INT NOT NULL,
   idPlatillo INT NOT NULL,
-  descripcion varchar(50) not null,
   cantidad DECIMAL NOT NULL CHECK (cantidad > 0),
   precioUnitario DECIMAL NOT NULL,
   total DECIMAL NOT NULL,
-  CONSTRAINT fk_CompresDetalle FOREIGN KEY (idVenta) REFERENCES Venta(id),
-  CONSTRAINT fk_ComprasDetalle FOREIGN KEY (idPlatillo) REFERENCES Platillo(id)
+  CONSTRAINT fk_VentaDetalle FOREIGN KEY (idVenta) REFERENCES Venta(id),
+  CONSTRAINT fk_PlatilloDetalle FOREIGN KEY (idPlatillo) REFERENCES Platillo(id)
 );
 
 ALTER TABLE Cliente ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
@@ -170,22 +172,32 @@ AS
 		AND e.cedulaIdentidad+e.nombres+e.primerApellido+e.segundoApellido LIKE '%'+REPLACE(@parametro, ' ', '%')+'%'
 		order by e.estado desc,nombres asc, primerApellido asc;
 GO
-create PROC paClienteListar @parametro VARCHAR(100)
+alter PROC paClienteListar @parametro VARCHAR(100)
 AS
   SELECT * FROM Cliente
-  WHERE estado<>-1 and ci+nombreCompleto LIKE '%'+REPLACE(@parametro, ' ', '%')+'%'
-  ORDER BY estado desc, nombreCompleto asc;
+  WHERE estado<>-1 and ci+nombres+apellidos LIKE '%'+REPLACE(@parametro, ' ', '%')+'%'
+  ORDER BY estado desc, nombres asc;
 GO
 
-create proc paVentaListar @parametro varchar(100)
+alter proc paVentaListar @parametro varchar(100)
 as
- select*from VentaDetalle
- where estado <>-1 and descripcion like '%'+REPLACE(@parametro, ' ', '%')+'%'
- order by estado desc, descripcion desc;
+ select*from Venta
+ where estado <>-1 and razonSocial like '%'+REPLACE(@parametro, ' ', '%')+'%'
+ order by estado desc;
  go
 
+create proc paVentaDetalleListar @parametro varchar(100)
+as
+ select*from VentaDetalle
+ where estado <>-1
+ order by estado desc;
+ go
+
+ exec paClienteListar '';
 EXEC paPlatillosListar '';
 EXEC paEmpleadoListar '';
+exec paVentaListar '';
+exec paVentaDetalleListar '';
 
 INSERT INTO Platillo(codigo, nombre, precio)
 VALUES ('AL001', 'Picante de Pollo',15);
@@ -199,6 +211,9 @@ VALUES ('PO003', 'Parrillada', 20);
 INSERT INTO Platillo(codigo, nombre, precio)
 VALUES ('VE004', 'Mondongo', 25);
 
+insert into Cliente(ci,nombres,apellidos,celular)
+values('862465','mena','torrico',87656)
+
 INSERT INTO Empleado(cedulaIdentidad, nombres, primerApellido, segundoApellido, direccion, celular, cargo)
 VALUES ('123457', 'Alex', 'Arias', 'L�pez', 'Calle Loa 50', 16767676, 'Limpieza');
 
@@ -209,6 +224,13 @@ INSERT INTO Usuario(idEmpleado, usuario, clave)
 VALUES (1, 'jperez', 'i0hcoO/nssY6WOs9pOp5Xw==');
 
 UPDATE Usuario SET clave='i0hcoO/nssY6WOs9pOp5Xw==' WHERE id=1;
-
-SELECT * FROM Platillos;
+insert into Venta(idCliente,idEmpleado,razonSocial)
+values(1,1,'venda medio dia')
+insert into VentaDetalle(idVenta,idPlatillo,cantidad,precioUnitario,total)
+values(1,1,1,10,10)
+select*from Venta;
+select*from VentaDetalle;
+SELECT * FROM Platillo;
+select*from Cliente;
+select*from Empleado;
 SELECT * FROM Usuario;

@@ -14,12 +14,9 @@ namespace CadRestaurant
     public partial class paVentaListar_Result
     {
         public int id { get; set; }
-        public int idVenta { get; set; }
-        public int idPlatillo { get; set; }
-        public string descripcion { get; set; }
-        public decimal cantidad { get; set; }
-        public decimal precioUnitario { get; set; }
-        public decimal total { get; set; }
+        public int idCliente { get; set; }
+        public int idEmpleado { get; set; }
+        public string razonSocial { get; set; }
         public string usuarioRegistro { get; set; }
         public System.DateTime fechaRegistro { get; set; }
         public short estado { get; set; }

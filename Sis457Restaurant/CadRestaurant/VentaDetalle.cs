@@ -17,7 +17,6 @@ namespace CadRestaurant
         public int id { get; set; }
         public int idVenta { get; set; }
         public int idPlatillo { get; set; }
-        public string descripcion { get; set; }
         public decimal cantidad { get; set; }
         public decimal precioUnitario { get; set; }
         public decimal total { get; set; }

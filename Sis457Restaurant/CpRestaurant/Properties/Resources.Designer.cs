@@ -194,6 +194,16 @@ namespace CpRestaurant.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap point_of_sale_40dp_000000_FILL1_wght400_GRAD0_opsz40 {
+            get {
+                object obj = ResourceManager.GetObject("point_of_sale_40dp_000000_FILL1_wght400_GRAD0_opsz40", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap save_40dp_000000_FILL1_wght400_GRAD0_opsz40 {
             get {
                 object obj = ResourceManager.GetObject("save_40dp_000000_FILL1_wght400_GRAD0_opsz40", resourceCulture);

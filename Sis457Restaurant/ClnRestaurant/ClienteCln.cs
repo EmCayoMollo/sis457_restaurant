@@ -25,8 +25,7 @@ namespace ClnRestaurant
 			{
 				var existente = context.Cliente.Find(cliente.id);
 				existente.ci = cliente.ci;
-				existente.nombres = cliente.nombres;
-				existente.apellidos = cliente.apellidos;
+				existente.nombreCompleto = cliente.nombreCompleto;
 				existente.celular= cliente.celular;
 				existente.usuarioRegistro = cliente.usuarioRegistro;
 				return context.SaveChanges();
@@ -44,11 +43,19 @@ namespace ClnRestaurant
 			}
 		}
 
-		public static Cliente obtenerUno(int id)
+		public static Cliente obtenerId(int id)
 		{
 			using (var context = new LabRestaurantEntities())
 			{
 				return context.Cliente.Find(id);
+			}
+		}
+
+		public static Cliente obtenerNombre(string nombreCompleto)
+		{
+			using (var context = new LabRestaurantEntities())
+			{
+				return context.Cliente.FirstOrDefault(x => x.nombreCompleto == nombreCompleto && x.estado != -1);
 			}
 		}
 

@@ -6,37 +6,8 @@
         <MappingFragment StoreEntitySet="Cliente">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="ci" ColumnName="ci" />
-          <ScalarProperty Name="nombres" ColumnName="nombres" />
-          <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+          <ScalarProperty Name="nombreCompleto" ColumnName="nombreCompleto" />
           <ScalarProperty Name="celular" ColumnName="celular" />
-          <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
-          <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
-          <ScalarProperty Name="estado" ColumnName="estado" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Compra">
-      <EntityTypeMapping TypeName="LabRestaurantModel.Compra">
-        <MappingFragment StoreEntitySet="Compra">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="idProveedor" ColumnName="idProveedor" />
-          <ScalarProperty Name="transaccion" ColumnName="transaccion" />
-          <ScalarProperty Name="fecha" ColumnName="fecha" />
-          <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
-          <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
-          <ScalarProperty Name="estado" ColumnName="estado" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="CompraDetalle">
-      <EntityTypeMapping TypeName="LabRestaurantModel.CompraDetalle">
-        <MappingFragment StoreEntitySet="CompraDetalle">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="idCompra" ColumnName="idCompra" />
-          <ScalarProperty Name="idInsumo" ColumnName="idInsumo" />
-          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
-          <ScalarProperty Name="precioUnitario" ColumnName="precioUnitario" />
-          <ScalarProperty Name="total" ColumnName="total" />
           <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
           <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
           <ScalarProperty Name="estado" ColumnName="estado" />
@@ -118,24 +89,13 @@
       <EntityTypeMapping TypeName="LabRestaurantModel.Venta">
         <MappingFragment StoreEntitySet="Venta">
           <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
-          <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
-          <ScalarProperty Name="razonSocial" ColumnName="razonSocial" />
-          <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
-          <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
-          <ScalarProperty Name="estado" ColumnName="estado" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="VentaDetalle">
-      <EntityTypeMapping TypeName="LabRestaurantModel.VentaDetalle">
-        <MappingFragment StoreEntitySet="VentaDetalle">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="idVenta" ColumnName="idVenta" />
           <ScalarProperty Name="idPlatillo" ColumnName="idPlatillo" />
-          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
           <ScalarProperty Name="precioUnitario" ColumnName="precioUnitario" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
           <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="efectivo" ColumnName="efectivo" />
+          <ScalarProperty Name="cambio" ColumnName="cambio" />
           <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
           <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
           <ScalarProperty Name="estado" ColumnName="estado" />
@@ -147,8 +107,7 @@
         <ComplexTypeMapping TypeName="LabRestaurantModel.paClienteListar_Result">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="ci" ColumnName="ci" />
-          <ScalarProperty Name="nombres" ColumnName="nombres" />
-          <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+          <ScalarProperty Name="nombreCompleto" ColumnName="nombreCompleto" />
           <ScalarProperty Name="celular" ColumnName="celular" />
           <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
           <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
@@ -181,34 +140,6 @@
           <ScalarProperty Name="codigo" ColumnName="codigo" />
           <ScalarProperty Name="nombre" ColumnName="nombre" />
           <ScalarProperty Name="precio" ColumnName="precio" />
-          <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
-          <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
-          <ScalarProperty Name="estado" ColumnName="estado" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="paVentaDetalleListar" FunctionName="LabRestaurantModel.Store.paVentaDetalleListar">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="LabRestaurantModel.paVentaDetalleListar_Result">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="idVenta" ColumnName="idVenta" />
-          <ScalarProperty Name="idPlatillo" ColumnName="idPlatillo" />
-          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
-          <ScalarProperty Name="precioUnitario" ColumnName="precioUnitario" />
-          <ScalarProperty Name="total" ColumnName="total" />
-          <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
-          <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
-          <ScalarProperty Name="estado" ColumnName="estado" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="paVentaListar" FunctionName="LabRestaurantModel.Store.paVentaListar">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="LabRestaurantModel.paVentaListar_Result">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
-          <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
-          <ScalarProperty Name="razonSocial" ColumnName="razonSocial" />
           <ScalarProperty Name="usuarioRegistro" ColumnName="usuarioRegistro" />
           <ScalarProperty Name="fechaRegistro" ColumnName="fechaRegistro" />
           <ScalarProperty Name="estado" ColumnName="estado" />

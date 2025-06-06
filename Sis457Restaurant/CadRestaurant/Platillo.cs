@@ -17,7 +17,7 @@ namespace CadRestaurant
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Platillo()
         {
-            this.VentaDetalle = new HashSet<VentaDetalle>();
+            this.Venta = new HashSet<Venta>();
         }
     
         public int id { get; set; }
@@ -29,6 +29,6 @@ namespace CadRestaurant
         public short estado { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<VentaDetalle> VentaDetalle { get; set; }
+        public virtual ICollection<Venta> Venta { get; set; }
     }
 }

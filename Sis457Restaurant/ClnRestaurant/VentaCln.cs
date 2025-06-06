@@ -1,4 +1,5 @@
 ﻿using CadRestaurant;
+using System.Data.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,20 +20,7 @@ namespace ClnRestaurant
 			}
 		}
 
-		public static int actualizar(Venta venta)
-		{
-			using (var context = new LabRestaurantEntities())
-			{
-				var existente = context.Venta.Find(venta.id);
-				existente.idCliente = venta.idCliente;
-				existente.idEmpleado = venta.idEmpleado;
-				existente.razonSocial = venta.razonSocial;
-				existente.fechaRegistro = venta.fechaRegistro;
-				existente.usuarioRegistro = venta.usuarioRegistro;
-				return context.SaveChanges();
-			}
-		}
-
+		
 		public static int eliminar(int id, string usuarioRegistro)
 		{
 			using (var context = new LabRestaurantEntities())
@@ -41,6 +29,15 @@ namespace ClnRestaurant
 				venta.estado = -1;
 				venta.usuarioRegistro = usuarioRegistro;
 				return context.SaveChanges();
+			}
+		}
+
+		public static List<Venta> listar()
+		{
+			using (var context = new LabRestaurantEntities())
+			{
+				return context.Venta.Include(x => x.Cliente)
+			.Include(x => x.Platillo).Where(x => x.estado != -1).ToList();
 			}
 		}
 

@@ -70,7 +70,7 @@ namespace CpRestaurant
 
 			int index = dgvLista.CurrentCell.RowIndex;
 			int id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
-			var platillo = PlatilloCln.obtenerUno(id);
+			var platillo = PlatilloCln.obtenerId(id);
 			txtCodigo.Text = platillo.codigo;
 			txtNombre.Text=platillo.nombre;
 			nudPrecio.Value=platillo.precio;

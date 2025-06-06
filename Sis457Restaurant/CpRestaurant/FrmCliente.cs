@@ -29,8 +29,7 @@ namespace CpRestaurant
 			dgvLista.Columns["id"].Visible = false;
 			dgvLista.Columns["estado"].Visible = false;
 			dgvLista.Columns["ci"].HeaderText = "CI";
-			dgvLista.Columns["nombres"].HeaderText = "Nombres";
-			dgvLista.Columns["apellidos"].HeaderText = "Apellidos";
+			dgvLista.Columns["nombreCompleto"].HeaderText = "Nombre Completo";
 			dgvLista.Columns["celular"].HeaderText = "Celular";
 			dgvLista.Columns["usuarioRegistro"].HeaderText = "Usuario Registro";
 			dgvLista.Columns["fechaRegistro"].HeaderText = "Fecha Registro";
@@ -64,10 +63,9 @@ namespace CpRestaurant
 
 			int index = dgvLista.CurrentCell.RowIndex;
 			int id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
-			var cliente = ClienteCln.obtenerUno(id);
+			var cliente = ClienteCln.obtenerId(id);
 			txtCi.Text = cliente.ci;
-			txtNombres.Text = cliente.nombres;
-			txtApellidos.Text = cliente.apellidos;
+			txtNombreCompleto.Text = cliente.nombreCompleto;
 			txtCelular.Text = cliente.celular.ToString();
 			txtCi.Focus();
 		}
@@ -96,7 +94,7 @@ namespace CpRestaurant
 		private void limpiar()
 		{
 			txtCi.Clear();
-			txtNombres.Clear();
+			txtNombreCompleto.Clear();
 			txtCelular.Clear();
 		}
 
@@ -114,16 +112,16 @@ namespace CpRestaurant
 		{
 			bool esValido = true;
 			erpCi.SetError(txtCi, "");
-			erpNombres.SetError(txtNombres, "");
+			erpNombres.SetError(txtNombreCompleto, "");
 
 			if (string.IsNullOrEmpty(txtCi.Text))
 			{
 				erpCi.SetError(txtCi, "El campo Cedula de identidad es obligatorio");
 				esValido = false;
 			}
-			if (string.IsNullOrEmpty(txtNombres.Text))
+			if (string.IsNullOrEmpty(txtNombreCompleto.Text))
 			{
-				erpNombres.SetError(txtNombres, "el campo Nombres es obligatorio");
+				erpNombres.SetError(txtNombreCompleto, "el campo Nombres es obligatorio");
 				esValido = false;
 			}
 			if (string.IsNullOrEmpty(txtCelular.Text))
@@ -141,8 +139,7 @@ namespace CpRestaurant
 			{
 				var cliente = new Cliente();
 				cliente.ci = txtCi.Text.Trim();
-				cliente.nombres = txtNombres.Text.Trim();
-				cliente.apellidos = txtApellidos.Text.Trim();
+				cliente.nombreCompleto = txtNombreCompleto.Text.Trim();
 				cliente.celular = long.Parse(txtCelular.Text.Trim());
 				cliente.usuarioRegistro = Util.usuario.usuario1;
 

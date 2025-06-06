@@ -28,15 +28,12 @@ namespace CadRestaurant
         }
     
         public virtual DbSet<Cliente> Cliente { get; set; }
-        public virtual DbSet<Compra> Compra { get; set; }
-        public virtual DbSet<CompraDetalle> CompraDetalle { get; set; }
         public virtual DbSet<Empleado> Empleado { get; set; }
         public virtual DbSet<Insumo> Insumo { get; set; }
         public virtual DbSet<Platillo> Platillo { get; set; }
         public virtual DbSet<Proveedor> Proveedor { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
         public virtual DbSet<Venta> Venta { get; set; }
-        public virtual DbSet<VentaDetalle> VentaDetalle { get; set; }
     
         public virtual ObjectResult<paClienteListar_Result> paClienteListar(string parametro)
         {
@@ -63,24 +60,6 @@ namespace CadRestaurant
                 new ObjectParameter("parametro", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paPlatilloListar_Result>("paPlatilloListar", parametroParameter);
-        }
-    
-        public virtual ObjectResult<paVentaDetalleListar_Result> paVentaDetalleListar(string parametro)
-        {
-            var parametroParameter = parametro != null ?
-                new ObjectParameter("parametro", parametro) :
-                new ObjectParameter("parametro", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paVentaDetalleListar_Result>("paVentaDetalleListar", parametroParameter);
-        }
-    
-        public virtual ObjectResult<paVentaListar_Result> paVentaListar(string parametro)
-        {
-            var parametroParameter = parametro != null ?
-                new ObjectParameter("parametro", parametro) :
-                new ObjectParameter("parametro", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<paVentaListar_Result>("paVentaListar", parametroParameter);
         }
     }
 }

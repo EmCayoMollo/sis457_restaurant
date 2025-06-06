@@ -55,6 +55,7 @@
 			// c1Ribbon1
 			// 
 			this.c1Ribbon1.ApplicationMenuHolder = this.ribbonApplicationMenu1;
+			this.c1Ribbon1.AutoSizeElement = C1.Framework.AutoSizeElement.Width;
 			this.c1Ribbon1.BottomToolBarHolder = this.ribbonBottomToolBar1;
 			this.c1Ribbon1.ConfigToolBarHolder = this.ribbonConfigToolBar1;
 			this.c1Ribbon1.Location = new System.Drawing.Point(0, 0);

@@ -43,7 +43,7 @@ namespace ClnRestaurant
 			}
 		}
 
-		public static Platillo obtenerUno(int id)
+		public static Platillo obtenerId(int id)
 		{
 			using (var context = new LabRestaurantEntities())
 			{
@@ -51,6 +51,13 @@ namespace ClnRestaurant
 			}
 		}
 
+		public static Platillo obtenerNombre(string nombre)
+		{
+			using (var context = new LabRestaurantEntities())
+			{
+				return context.Platillo.FirstOrDefault(x => x.nombre==nombre && x.estado != -1);
+			}
+		}
 		public static List<Platillo> listar()
 		{
 			using (var context = new LabRestaurantEntities())

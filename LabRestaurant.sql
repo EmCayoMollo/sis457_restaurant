@@ -21,8 +21,8 @@ DROP TABLE Usuario;
 DROP TABLE Proveedor;
 DROP TABLE Insumo;
 DROP TABLE Compra;
-DROP TABLE Venta; 
 DROP TABLE CompraDetalle;
+DROP TABLE Venta;
 DROP TABLE VentaDetalle;
 DROP TABLE Cliente;
 
@@ -32,7 +32,6 @@ CREATE TABLE Platillo(
     nombre VARCHAR(30) NOT NULL,
     precio DECIMAL NOT NULL CHECK (precio>0)
 );
-
 CREATE TABLE Empleado (
   id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
   cedulaIdentidad VARCHAR(12) NOT NULL,
@@ -50,7 +49,6 @@ CREATE TABLE Usuario (
   clave VARCHAR(250) NOT NULL,
   CONSTRAINT fk_Usuario_Empleado FOREIGN KEY (idEmpleado) REFERENCES Empleado(id)
 );
-
 CREATE TABLE Proveedor (
   id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
   nit BIGINT NOT NULL,
@@ -59,12 +57,10 @@ CREATE TABLE Proveedor (
   telefono VARCHAR(30) NOT NULL,
   representante VARCHAR(100) NOT NULL
 );
-
 CREATE TABLE Cliente(
   id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
   ci varchar(15) not null,
-  nombres varchar(100)not null,
-  apellidos varchar(100)not null,
+  nombreCompleto varchar(100)not null,
   celular bigint not null
 );
 
@@ -74,7 +70,6 @@ CREATE TABLE Insumo(
   cantidad int not null,
   precio DECIMAL NOT NULL CHECK (precio>0)
 );
-
 CREATE TABLE Compra (
   id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
   idProveedor INT NOT NULL,
@@ -82,16 +77,6 @@ CREATE TABLE Compra (
   fecha DATE NOT NULL DEFAULT GETDATE(),
   CONSTRAINT fk_Compra_Proveedor FOREIGN KEY(idProveedor) REFERENCES Proveedor(id)
 );
-
-CREATE TABLE Venta(
-  id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
-  idCliente int not null,
-  idEmpleado int not null,
-  razonSocial varchar(100) NOT NULL,
-  CONSTRAINT fk_venta_Cliente FOREIGN KEY(idCliente) REFERENCES Cliente(id),
-  CONSTRAINT fk_venta_Empleado FOREIGN KEY(idEmpleado) REFERENCES Empleado(id)
-);
-
 CREATE TABLE CompraDetalle (
   id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
   idCompra INT NOT NULL,
@@ -103,15 +88,32 @@ CREATE TABLE CompraDetalle (
   CONSTRAINT fk_CompraDetalle FOREIGN KEY (idInsumo) REFERENCES Insumo(id)
 );
 
+CREATE TABLE Venta(
+  id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+  idPlatillo INT NOT NULL,
+  idCliente int not null,
+  precioUnitario decimal NOT NULL CHECK (precioUnitario > 0),
+  cantidad int NOT NULL CHECK (cantidad > 0),
+  total decimal NOT NULL,
+  efectivo decimal NOT NULL,
+  cambio decimal NOT NULL,
+  CONSTRAINT fk_Venta_Platillo FOREIGN KEY (idPlatillo) REFERENCES Platillo(id),
+  CONSTRAINT fk_venta_Cliente FOREIGN KEY(idCliente) REFERENCES Cliente(id),
+);
+drop table Venta;
+select * from Venta;
+
 CREATE TABLE VentaDetalle (
   id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
-  idVenta INT NOT NULL,
-  idPlatillo INT NOT NULL,
+  idlatillo INT NOT NULL,
+  idCliente int not null,
+  idEmpleado int not null,
   cantidad DECIMAL NOT NULL CHECK (cantidad > 0),
   precioUnitario DECIMAL NOT NULL,
   total DECIMAL NOT NULL,
-  CONSTRAINT fk_VentaDetalle FOREIGN KEY (idVenta) REFERENCES Venta(id),
-  CONSTRAINT fk_PlatilloDetalle FOREIGN KEY (idPlatillo) REFERENCES Platillo(id)
+  CONSTRAINT fk_Platillo FOREIGN KEY (idVenta) REFERENCES Venta(id),
+  CONSTRAINT fk_Cliente FOREIGN KEY(idCliente) REFERENCES Cliente(id),
+  CONSTRAINT fk_venta_Empleado FOREIGN KEY(idEmpleado) REFERENCES Empleado(id)
 );
 
 ALTER TABLE Cliente ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
@@ -175,29 +177,13 @@ GO
 alter PROC paClienteListar @parametro VARCHAR(100)
 AS
   SELECT * FROM Cliente
-  WHERE estado<>-1 and ci+nombres+apellidos LIKE '%'+REPLACE(@parametro, ' ', '%')+'%'
-  ORDER BY estado desc, nombres asc;
+  WHERE estado<>-1 and ci+nombreCompleto LIKE '%'+REPLACE(@parametro, ' ', '%')+'%'
+  ORDER BY estado desc, nombreCompleto asc;
 GO
-
-alter proc paVentaListar @parametro varchar(100)
-as
- select*from Venta
- where estado <>-1 and razonSocial like '%'+REPLACE(@parametro, ' ', '%')+'%'
- order by estado desc;
- go
-
-create proc paVentaDetalleListar @parametro varchar(100)
-as
- select*from VentaDetalle
- where estado <>-1
- order by estado desc;
- go
 
  exec paClienteListar '';
 EXEC paPlatillosListar '';
 EXEC paEmpleadoListar '';
-exec paVentaListar '';
-exec paVentaDetalleListar '';
 
 INSERT INTO Platillo(codigo, nombre, precio)
 VALUES ('AL001', 'Picante de Pollo',15);
@@ -224,13 +210,8 @@ INSERT INTO Usuario(idEmpleado, usuario, clave)
 VALUES (1, 'jperez', 'i0hcoO/nssY6WOs9pOp5Xw==');
 
 UPDATE Usuario SET clave='i0hcoO/nssY6WOs9pOp5Xw==' WHERE id=1;
-insert into Venta(idCliente,idEmpleado,razonSocial)
-values(1,1,'venda medio dia')
-insert into VentaDetalle(idVenta,idPlatillo,cantidad,precioUnitario,total)
-values(1,1,1,10,10)
+insert into Venta(idPlatillo,idCliente,idEmpleado,precioUnitario,cantidad,total)
+values(1,1,1,1,3,30)
 select*from Venta;
-select*from VentaDetalle;
-SELECT * FROM Platillo;
-select*from Cliente;
-select*from Empleado;
-SELECT * FROM Usuario;
+select*from Platillo
+delete from venta where id=3

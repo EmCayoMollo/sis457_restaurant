@@ -48,7 +48,7 @@ namespace CpRestaurant
 			if (validar())
 			{
 				var cliente = new Cliente();
-				cliente.ci = txtCi.Text.Trim();
+				cliente.nit = txtCi.Text.Trim();
 				cliente.nombreCompleto = txtNombreCompleto.Text.Trim();
 				cliente.celular = long.Parse(txtCelular.Text.Trim());
 				cliente.usuarioRegistro = Util.usuario.usuario1;

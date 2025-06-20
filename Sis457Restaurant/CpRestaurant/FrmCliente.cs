@@ -24,18 +24,18 @@ namespace CpRestaurant
 
 		private void listar()
 		{
-			var lista = ClienteCln.listarPa(txtParametro.Text.Trim());
-			dgvLista.DataSource = lista;
-			dgvLista.Columns["id"].Visible = false;
-			dgvLista.Columns["estado"].Visible = false;
-			dgvLista.Columns["ci"].HeaderText = "CI";
-			dgvLista.Columns["nombreCompleto"].HeaderText = "Nombre Completo";
-			dgvLista.Columns["celular"].HeaderText = "Celular";
-			dgvLista.Columns["usuarioRegistro"].HeaderText = "Usuario Registro";
-			dgvLista.Columns["fechaRegistro"].HeaderText = "Fecha Registro";
-			if (lista.Count > 0) dgvLista.CurrentCell = dgvLista.Rows[0].Cells["ci"];
-			btnEditar.Enabled = lista.Count > 0;
-			btnEliminar.Enabled = lista.Count > 0;
+			//var lista = ClienteCln.listarPa(txtParametro.Text.Trim());
+			//dgvLista.DataSource = lista;
+			//dgvLista.Columns["id"].Visible = false;
+			//dgvLista.Columns["estado"].Visible = false;
+			//dgvLista.Columns["ci"].HeaderText = "CI";
+			//dgvLista.Columns["nombreCompleto"].HeaderText = "Nombre Completo";
+			//dgvLista.Columns["celular"].HeaderText = "Celular";
+			//dgvLista.Columns["usuarioRegistro"].HeaderText = "Usuario Registro";
+			//dgvLista.Columns["fechaRegistro"].HeaderText = "Fecha Registro";
+			//if (lista.Count > 0) dgvLista.CurrentCell = dgvLista.Rows[0].Cells["ci"];
+			//btnEditar.Enabled = lista.Count > 0;
+			//btnEliminar.Enabled = lista.Count > 0;
 		}
 
 		private void FrmCliente_Load(object sender, EventArgs e)
@@ -64,7 +64,7 @@ namespace CpRestaurant
 			int index = dgvLista.CurrentCell.RowIndex;
 			int id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
 			var cliente = ClienteCln.obtenerId(id);
-			txtCi.Text = cliente.ci;
+			txtCi.Text = cliente.nit;
 			txtNombreCompleto.Text = cliente.nombreCompleto;
 			txtCelular.Text = cliente.celular.ToString();
 			txtCi.Focus();
@@ -138,7 +138,7 @@ namespace CpRestaurant
 			if (validar())
 			{
 				var cliente = new Cliente();
-				cliente.ci = txtCi.Text.Trim();
+				cliente.nit = txtCi.Text.Trim();
 				cliente.nombreCompleto = txtNombreCompleto.Text.Trim();
 				cliente.celular = long.Parse(txtCelular.Text.Trim());
 				cliente.usuarioRegistro = Util.usuario.usuario1;

@@ -191,8 +191,8 @@ VALUES ('PO003', 'Parrillada', 20);
 INSERT INTO Platillo(codigo, nombre, precio)
 VALUES ('VE004', 'Mondongo', 25);
 
-insert into Cliente(ci,nombres,apellidos,celular)
-values('862465','mena','torrico',87656)
+insert into Cliente(nit,nombreCompleto,razonSocial,celular)
+values('862465','mena torrico','cliente mensual',87656)
 
 INSERT INTO Empleado(cedulaIdentidad, nombres, primerApellido, segundoApellido, direccion, celular, cargo)
 VALUES ('123457', 'Alex', 'Arias', 'L�pez', 'Calle Loa 50', 16767676, 'Limpieza');

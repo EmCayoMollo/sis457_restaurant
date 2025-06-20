@@ -23,18 +23,18 @@ namespace CpRestaurant
 
 		private void listar()
 		{
-			var lista = PlatilloCln.listarPa(txtParametro.Text.Trim());
-			dgvLista.DataSource = lista;
-			dgvLista.Columns["id"].Visible = false;
-			dgvLista.Columns["estado"].Visible = false;
-			dgvLista.Columns["codigo"].HeaderText = "Código";
-			dgvLista.Columns["nombre"].HeaderText = "Nombre";
-			dgvLista.Columns["precio"].HeaderText = "Precio de Venta";
-			dgvLista.Columns["usuarioRegistro"].HeaderText = "Usuario Registro";
-			dgvLista.Columns["fechaRegistro"].HeaderText = "Fecha Registro";
-			if (lista.Count > 0) dgvLista.CurrentCell = dgvLista.Rows[0].Cells["codigo"];
-			btnEditar.Enabled = lista.Count > 0;
-			btnEliminar.Enabled = lista.Count > 0;
+			//var lista = PlatilloCln.listarPa(txtParametro.Text.Trim());
+			//dgvLista.DataSource = lista;
+			//dgvLista.Columns["id"].Visible = false;
+			//dgvLista.Columns["estado"].Visible = false;
+			//dgvLista.Columns["codigo"].HeaderText = "Código";
+			//dgvLista.Columns["nombre"].HeaderText = "Nombre";
+			//dgvLista.Columns["precio"].HeaderText = "Precio de Venta";
+			//dgvLista.Columns["usuarioRegistro"].HeaderText = "Usuario Registro";
+			//dgvLista.Columns["fechaRegistro"].HeaderText = "Fecha Registro";
+			//if (lista.Count > 0) dgvLista.CurrentCell = dgvLista.Rows[0].Cells["codigo"];
+			//btnEditar.Enabled = lista.Count > 0;
+			//btnEliminar.Enabled = lista.Count > 0;
 		}
 
 		private void FrmPlatillo_Load(object sender, EventArgs e)

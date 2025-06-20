@@ -11,7 +11,7 @@ namespace ClnRestaurant
 	{
 		public static int insertar(Cliente cliente)
 		{
-			using (var context = new LabRestaurantEntities())
+			using (var context = new FinalRestaurantEntities())
 			{
 				context.Cliente.Add(cliente);
 				context.SaveChanges();
@@ -21,10 +21,10 @@ namespace ClnRestaurant
 
 		public static int actualizar(Cliente cliente)
 		{
-			using (var context = new LabRestaurantEntities())
+			using (var context = new FinalRestaurantEntities())
 			{
 				var existente = context.Cliente.Find(cliente.id);
-				existente.ci = cliente.ci;
+				existente.nit = cliente.nit;
 				existente.nombreCompleto = cliente.nombreCompleto;
 				existente.celular= cliente.celular;
 				existente.usuarioRegistro = cliente.usuarioRegistro;
@@ -34,7 +34,7 @@ namespace ClnRestaurant
 
 		public static int eliminar(int id, string usuario)
 		{
-			using (var context = new LabRestaurantEntities())
+			using (var context = new FinalRestaurantEntities())
 			{
 				var cliente = context.Cliente.Find(id);
 				cliente.estado = -1;
@@ -45,7 +45,7 @@ namespace ClnRestaurant
 
 		public static Cliente obtenerId(int id)
 		{
-			using (var context = new LabRestaurantEntities())
+			using (var context = new FinalRestaurantEntities())
 			{
 				return context.Cliente.Find(id);
 			}
@@ -53,7 +53,7 @@ namespace ClnRestaurant
 
 		public static Cliente obtenerNombre(string nombreCompleto)
 		{
-			using (var context = new LabRestaurantEntities())
+			using (var context = new FinalRestaurantEntities())
 			{
 				return context.Cliente.FirstOrDefault(x => x.nombreCompleto == nombreCompleto && x.estado != -1);
 			}
@@ -61,18 +61,18 @@ namespace ClnRestaurant
 
 		public static List<Cliente> listar()
 		{
-			using (var context = new LabRestaurantEntities())
+			using (var context = new FinalRestaurantEntities())
 			{
 				return context.Cliente.Where(x => x.estado != -1).ToList();
 			}
 		}
 
-		public static List<paClienteListar_Result> listarPa(string parametro)
-		{
-			using (var context = new LabRestaurantEntities())
-			{
-				return context.paClienteListar(parametro).ToList();
-			}
-		}
+		//public static List<paClienteListar_Result> listarPa(string parametro)
+		//{
+		//	using (var context = new FinalRestaurantEntities())
+		//	{
+		//		return context.paClienteListar(parametro).ToList();
+		//	}
+		//}
 	}
 }

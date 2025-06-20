@@ -12,7 +12,7 @@ namespace ClnRestaurant
 	{
 		public static int insertar(Venta venta)
 		{
-			using (var context = new LabRestaurantEntities())
+			using (var context = new FinalRestaurantEntities())
 			{
 				context.Venta.Add(venta);
 				context.SaveChanges();
@@ -23,7 +23,7 @@ namespace ClnRestaurant
 		
 		public static int eliminar(int id, string usuarioRegistro)
 		{
-			using (var context = new LabRestaurantEntities())
+			using (var context = new FinalRestaurantEntities())
 			{
 				var venta = context.Venta.Find(id);
 				venta.estado = -1;
@@ -34,7 +34,7 @@ namespace ClnRestaurant
 
 		public static List<Venta> listar()
 		{
-			using (var context = new LabRestaurantEntities())
+			using (var context = new FinalRestaurantEntities())
 			{
 				return context.Venta.Include(x => x.Cliente)
 			.Include(x => x.Platillo).Where(x => x.estado != -1).ToList();

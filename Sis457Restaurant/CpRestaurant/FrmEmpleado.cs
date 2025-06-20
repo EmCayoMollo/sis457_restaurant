@@ -24,23 +24,23 @@ namespace CpRestaurant
 
 		private void listar()
 		{
-			var lista = EmpleadoCln.listarPa(txtParametro.Text.Trim());
-			dgvLista.DataSource = lista;
-			dgvLista.Columns["id"].Visible = false;
-			dgvLista.Columns["estado"].Visible = false;
-			dgvLista.Columns["usuario"].HeaderText = "Usuario";
-			dgvLista.Columns["cedulaIdentidad"].HeaderText = "Cédula de Identidad";
-			dgvLista.Columns["nombres"].HeaderText = "Nombres";
-			dgvLista.Columns["primerApellido"].HeaderText = "Primer Apellido";
-			dgvLista.Columns["segundoApellido"].HeaderText = "Segundo Apellido";
-			dgvLista.Columns["direccion"].HeaderText = "Dirección";
-			dgvLista.Columns["celular"].HeaderText = "Celular";
-			dgvLista.Columns["cargo"].HeaderText = "Cargo";
-			dgvLista.Columns["usuarioRegistro"].HeaderText = "Usuario Registro";
-			dgvLista.Columns["fechaRegistro"].HeaderText = "Fecha Registro";
-			if (lista.Count > 0) dgvLista.CurrentCell = dgvLista.Rows[0].Cells["cedulaIdentidad"];
-			btnEditar.Enabled = lista.Count > 0;
-			btnEliminar.Enabled = lista.Count > 0;
+		//	var lista = EmpleadoCln.listarPa(txtParametro.Text.Trim());
+		//	dgvLista.DataSource = lista;
+		//	dgvLista.Columns["id"].Visible = false;
+		//	dgvLista.Columns["estado"].Visible = false;
+		//	dgvLista.Columns["usuario"].HeaderText = "Usuario";
+		//	dgvLista.Columns["cedulaIdentidad"].HeaderText = "Cédula de Identidad";
+		//	dgvLista.Columns["nombres"].HeaderText = "Nombres";
+		//	dgvLista.Columns["primerApellido"].HeaderText = "Primer Apellido";
+		//	dgvLista.Columns["segundoApellido"].HeaderText = "Segundo Apellido";
+		//	dgvLista.Columns["direccion"].HeaderText = "Dirección";
+		//	dgvLista.Columns["celular"].HeaderText = "Celular";
+		//	dgvLista.Columns["cargo"].HeaderText = "Cargo";
+		//	dgvLista.Columns["usuarioRegistro"].HeaderText = "Usuario Registro";
+		//	dgvLista.Columns["fechaRegistro"].HeaderText = "Fecha Registro";
+		//	if (lista.Count > 0) dgvLista.CurrentCell = dgvLista.Rows[0].Cells["cedulaIdentidad"];
+		//	btnEditar.Enabled = lista.Count > 0;
+		//	btnEliminar.Enabled = lista.Count > 0;
 		}
 
 		private void FrmEmpleado_Load(object sender, EventArgs e)

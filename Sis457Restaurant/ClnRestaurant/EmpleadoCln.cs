@@ -11,7 +11,7 @@ namespace ClnRestaurant
 	{
 		public static int insertar(Empleado empleado, Usuario usuario)
 		{
-			using (var context = new LabRestaurantEntities())
+			using (var context = new FinalRestaurantEntities())
 			{
 				context.Empleado.Add(empleado);
 				context.SaveChanges();
@@ -31,7 +31,7 @@ namespace ClnRestaurant
 
 		public static int actualizar(Empleado empleado, string nombreUsuario, string clave)
 		{
-			using (var context = new LabRestaurantEntities())
+			using (var context = new FinalRestaurantEntities())
 			{
 				var existente = context.Empleado.Find(empleado.id);
 				existente.cedulaIdentidad = empleado.cedulaIdentidad;
@@ -73,7 +73,7 @@ namespace ClnRestaurant
 
 		public static int eliminar(int id, string usuario)
 		{
-			using (var context = new LabRestaurantEntities())
+			using (var context = new FinalRestaurantEntities())
 			{
 				var empleado = context.Empleado.Find(id);
 				empleado.estado = -1;
@@ -91,18 +91,18 @@ namespace ClnRestaurant
 
 		public static Empleado obtenerUno(int id)
 		{
-			using (var context = new LabRestaurantEntities())
+			using (var context = new FinalRestaurantEntities())
 			{
 				return context.Empleado.Include("Usuario").Where(x => x.id == id).FirstOrDefault();
 			}
 		}
 
-		public static List<paEmpleadoListar_Result> listarPa(string parametro)
-		{
-			using (var context = new LabRestaurantEntities())
-			{
-				return context.paEmpleadoListar(parametro).ToList();
-			}
-		}
+		//public static List<paEmpleadoListar_Result> listarPa(string parametro)
+		//{
+		//	using (var context = new FinalRestaurantEntities())
+		//	{
+		//		return context.paEmpleadoListar(parametro).ToList();
+		//	}
+		//}
 	}
 }

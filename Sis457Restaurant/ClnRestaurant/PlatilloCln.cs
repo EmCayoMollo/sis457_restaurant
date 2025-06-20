@@ -11,7 +11,7 @@ namespace ClnRestaurant
 	{
 		public static int insertar(Platillo platillo)
 		{
-			using (var context = new LabRestaurantEntities())
+			using (var context = new FinalRestaurantEntities())
 			{
 				context.Platillo.Add(platillo);
 				context.SaveChanges();
@@ -21,7 +21,7 @@ namespace ClnRestaurant
 
 		public static int actualizar(Platillo platillo)
 		{
-			using (var context = new LabRestaurantEntities())
+			using (var context = new FinalRestaurantEntities())
 			{
 				var existente = context.Platillo.Find(platillo.id);
 				existente.codigo = platillo.codigo;
@@ -34,7 +34,7 @@ namespace ClnRestaurant
 
 		public static int eliminar(int id, string usuario)
 		{
-			using (var context = new LabRestaurantEntities())
+			using (var context = new FinalRestaurantEntities())
 			{
 				var platillo = context.Platillo.Find(id);
 				platillo.estado = -1;
@@ -45,7 +45,7 @@ namespace ClnRestaurant
 
 		public static Platillo obtenerId(int id)
 		{
-			using (var context = new LabRestaurantEntities())
+			using (var context = new FinalRestaurantEntities())
 			{
 				return context.Platillo.Find(id);
 			}
@@ -53,25 +53,25 @@ namespace ClnRestaurant
 
 		public static Platillo obtenerNombre(string nombre)
 		{
-			using (var context = new LabRestaurantEntities())
+			using (var context = new FinalRestaurantEntities())
 			{
 				return context.Platillo.FirstOrDefault(x => x.nombre==nombre && x.estado != -1);
 			}
 		}
 		public static List<Platillo> listar()
 		{
-			using (var context = new LabRestaurantEntities())
+			using (var context = new FinalRestaurantEntities())
 			{
 				return context.Platillo.Where(x => x.estado != -1).ToList();
 			}
 		}
 
-		public static List<paPlatilloListar_Result> listarPa(string parametro)
-		{
-			using (var context = new LabRestaurantEntities())
-			{
-				return context.paPlatilloListar(parametro).ToList();
-			}
-		}
+		//public static List<paPlatilloListar_Result> listarPa(string parametro)
+		//{
+		//	using (var context = new FinalRestaurantEntities())
+		//	{
+		//		return context.paPlatilloListar(parametro).ToList();
+		//	}
+		//}
 	}
 }

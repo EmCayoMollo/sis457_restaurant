@@ -206,6 +206,9 @@ VALUES (1, 'jperez', 'i0hcoO/nssY6WOs9pOp5Xw==');
 UPDATE Usuario SET clave='i0hcoO/nssY6WOs9pOp5Xw==' WHERE id=1;
 insert into Venta(idPlatillo,idCliente,idEmpleado,precioUnitario,cantidad,total)
 values(1,1,1,1,3,30)
-select*from Venta;
+select*from Usuario;
 select*from Platillo
-delete from venta where id=3
+select* from venta where id=3
+
+insert into Venta(idPlatillo,idCliente,precioUnitario,cantidad,total,efectivo,cambio)
+values(1,1,15,2,30,50,20);

@@ -1,3 +1,4 @@
+wwwroot\contact.php
 wwwroot\css\bootstrap.css
 wwwroot\css\font-awesome.min.css
 wwwroot\css\jquery-ui.css
@@ -6,6 +7,7 @@ wwwroot\css\normalize.css
 wwwroot\css\picto-foundry-food.css
 wwwroot\css\site.css
 wwwroot\css\style-portfolio.css
+wwwroot\favicon-1.ico
 wwwroot\favicon.ico
 wwwroot\fonts\fontawesome-webfont.eot
 wwwroot\fonts\fontawesome-webfont.svg
@@ -115,6 +117,7 @@ wwwroot\lib\jquery\dist\jquery.slim.js
 wwwroot\lib\jquery\dist\jquery.slim.min.js
 wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
+wwwroot\reserve.php
 C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\WebRestaurante\wwwroot\lib\jquery\LICENSE.txt
 C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\WebRestaurante\wwwroot\lib\jquery\dist\jquery.slim.min.map
 C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\WebRestaurante\wwwroot\lib\jquery\dist\jquery.slim.min.js
@@ -193,3 +196,4 @@ C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\WebRestaurante\wwwroot
 C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\WebRestaurante\wwwroot\js\jquery-1.10.2.min.js
 C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\WebRestaurante\wwwroot\js\jquery.mixitup.min.js
 C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\WebRestaurante\wwwroot\js\main.js
+C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\WebRestaurante\wwwroot\favicon-1.ico

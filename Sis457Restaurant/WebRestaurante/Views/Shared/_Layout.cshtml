@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="~/WebRestaurante.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/normalize.css">
     <link rel="stylesheet" href="~/css/main.css" media="screen" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+    <link href='~/http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='~/http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="~/css/bootstrap.css">
     <link rel="stylesheet" href="~/css/style-portfolio.css">
     <link rel="stylesheet" href="~/css/picto-foundry-food.css" />
@@ -43,6 +43,29 @@
                         <li><a class="color_animation" href="#pricing">Menú de Platillos</a></li>
                         <li><a class="color_animation" href="#beer">Refrescos</a></li>
                         <li><a class="color_animation" href="#contact">Contactanos</a></li>
+
+                        @if (User.Identity.IsAuthenticated == true)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link me-4" href="#">@User.Identity.Name</a>
+                            </li>
+                            <li>@await Html.PartialAsync("_LogoutPartial")</li>
+                            <li class="nav-item">
+                                <a class="nav-link me-4" asp-controller="Clientes" asp-action="Index">Clientes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link me-4" asp-controller="Platillos" asp-action="Index">Platillos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link me-4" asp-controller="Ventas" asp-action="Index">Ventas</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link me-4" asp-controller="Account" asp-action="Login">Iniciar Sesión</a>
+                            </li>
+                        }
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div>

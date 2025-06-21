@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using WebRestaurante.Models;
 
@@ -7,6 +8,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<FinalRestaurantContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+	.AddCookie(options => options.LoginPath = new PathString("/Account/Login"));
+
+builder.Services.AddMemoryCache();
+builder.Services.AddSession();
+builder.Services.AddRazorPages();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -19,6 +27,10 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseRouting();
+
+app.UseCookiePolicy();
+app.UseSession();
+app.UseAuthentication();
 
 app.UseAuthorization();
 

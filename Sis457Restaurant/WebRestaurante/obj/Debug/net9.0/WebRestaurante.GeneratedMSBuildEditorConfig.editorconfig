@@ -17,109 +17,109 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WebRestaurante
 build_property.RootNamespace = WebRestaurante
-build_property.ProjectDir = C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\WebRestaurante\
+build_property.ProjectDir = C:\SIS457Restaurant\sis457_restaurant\Sis457Restaurant\WebRestaurante\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\edzon\Desktop\sis457_restaurant\Sis457Restaurant\WebRestaurante
+build_property.MSBuildProjectDirectory = C:\SIS457Restaurant\sis457_restaurant\Sis457Restaurant\WebRestaurante
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/edzon/Desktop/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Account/Login.cshtml]
+[C:/SIS457Restaurant/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/edzon/Desktop/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Clientes/Create.cshtml]
+[C:/SIS457Restaurant/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Clientes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/edzon/Desktop/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Clientes/Delete.cshtml]
+[C:/SIS457Restaurant/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Clientes/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/edzon/Desktop/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Clientes/Details.cshtml]
+[C:/SIS457Restaurant/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Clientes/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/edzon/Desktop/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Clientes/Edit.cshtml]
+[C:/SIS457Restaurant/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Clientes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/edzon/Desktop/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Clientes/Index.cshtml]
+[C:/SIS457Restaurant/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Clientes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/edzon/Desktop/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Home/Index.cshtml]
+[C:/SIS457Restaurant/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/edzon/Desktop/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Home/Privacy.cshtml]
+[C:/SIS457Restaurant/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/edzon/Desktop/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Platillos/Create.cshtml]
+[C:/SIS457Restaurant/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Platillos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhdGlsbG9zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/edzon/Desktop/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Platillos/Delete.cshtml]
+[C:/SIS457Restaurant/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Platillos/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhdGlsbG9zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/edzon/Desktop/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Platillos/Details.cshtml]
+[C:/SIS457Restaurant/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Platillos/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhdGlsbG9zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/edzon/Desktop/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Platillos/Edit.cshtml]
+[C:/SIS457Restaurant/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Platillos/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhdGlsbG9zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/edzon/Desktop/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Platillos/Index.cshtml]
+[C:/SIS457Restaurant/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Platillos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhdGlsbG9zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/edzon/Desktop/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Shared/Error.cshtml]
+[C:/SIS457Restaurant/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/edzon/Desktop/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Shared/_LogoutPartial.cshtml]
+[C:/SIS457Restaurant/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Shared/_LogoutPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dvdXRQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/edzon/Desktop/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/SIS457Restaurant/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/edzon/Desktop/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Ventas/Create.cshtml]
+[C:/SIS457Restaurant/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Ventas/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/edzon/Desktop/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Ventas/Delete.cshtml]
+[C:/SIS457Restaurant/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Ventas/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/edzon/Desktop/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Ventas/Details.cshtml]
+[C:/SIS457Restaurant/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Ventas/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/edzon/Desktop/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Ventas/Edit.cshtml]
+[C:/SIS457Restaurant/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Ventas/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/edzon/Desktop/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Ventas/Index.cshtml]
+[C:/SIS457Restaurant/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Ventas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/edzon/Desktop/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/_ViewImports.cshtml]
+[C:/SIS457Restaurant/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/edzon/Desktop/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/_ViewStart.cshtml]
+[C:/SIS457Restaurant/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/edzon/Desktop/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Shared/_Layout.cshtml]
+[C:/SIS457Restaurant/sis457_restaurant/Sis457Restaurant/WebRestaurante/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-3cbyn2ifcg

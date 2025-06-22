@@ -12,7 +12,7 @@
     <link href='~/http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="~/css/bootstrap.css">
     <link rel="stylesheet" href="~/css/style-portfolio.css">
-    <link rel="stylesheet" href="~/css/picto-foundry-food.css" />
+    <link rel="stylesheet" href="~/css/picto-foundry-fsood.css" />
     <link rel="stylesheet" href="~/css/jquery-ui.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="~/css/font-awesome.min.css" rel="stylesheet">
@@ -20,7 +20,7 @@
 
 </head>
 <body>
-    
+
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="row">
@@ -44,34 +44,46 @@
                         <li><a class="color_animation" href="#beer">Refrescos</a></li>
                         <li><a class="color_animation" href="#contact">Contactanos</a></li>
 
-                        @if (User.Identity.IsAuthenticated == true)
-                        {
-                            <li class="nav-item">
-                                <a class="nav-link me-4" href="#">@User.Identity.Name</a>
-                            </li>
-                            <li>@await Html.PartialAsync("_LogoutPartial")</li>
-                            <li class="nav-item">
-                                <a class="nav-link me-4" asp-controller="Clientes" asp-action="Index">Clientes</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link me-4" asp-controller="Platillos" asp-action="Index">Platillos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link me-4" asp-controller="Ventas" asp-action="Index">Ventas</a>
-                            </li>
-                        }
-                        else
-                        {
-                            <li class="nav-item">
-                                <a class="nav-link me-4" asp-controller="Account" asp-action="Login">Iniciar Sesión</a>
-                            </li>
-                        }
                     </ul>
-                </div><!-- /.navbar-collapse -->
+                </div>
+
+                @if (User.Identity.IsAuthenticated == true)
+                {
+                    <li class="nav-item">
+                        <a class="nav-link me-4" href="#">@User.Identity.Name</a>
+                    </li>
+                    <li>@await Html.PartialAsync("_LogoutPartial")</li>
+                    <li class="nav-item">
+                        <a class="nav-link me-4" asp-controller="Clientes" asp-action="Index">Clientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-4" asp-controller="Platillos" asp-action="Index">Platillos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-4" asp-controller="Ventas" asp-action="Index">Ventas</a>
+                    </li>
+                }
+                else
+                {
+                    <li class="nav-item">
+                        <a class="nav-link me-4" asp-controller="Account" asp-action="Login">Iniciar Sesión</a>
+                    </li>
+                }
             </div>
         </div><!-- /.container-fluid -->
     </nav>
-    
+    <div>  </div>
+    <div>  </div>
+    <div>  </div>
+    <div>  </div>
+    <div>  </div>
+    <div>  </div>
+    <div>  </div>
+    <div>  </div>
+    <div>  </div>
+    <div>  </div>
+    <div>  </div>
+
 
     <div class="container">
         <main role="main" class="pb-3">

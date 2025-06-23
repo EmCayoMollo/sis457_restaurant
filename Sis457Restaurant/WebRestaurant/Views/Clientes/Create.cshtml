@@ -1,11 +1,11 @@
 ﻿@model WebRestaurant.Models.Cliente
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Crear";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Create</h1>
+
 
 <h4>Cliente</h4>
 <hr />
@@ -34,14 +34,14 @@
                 <span asp-validation-for="Celular" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Guardar" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Volver a Lista</a>
 </div>
 
 @section Scripts {

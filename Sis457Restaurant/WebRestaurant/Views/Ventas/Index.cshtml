@@ -5,37 +5,37 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Ventas</h1>
 
 <p>
-    <a asp-controller="VentasCompleta" asp-action="CrearVentaCompleta">Create New</a>
+    <a asp-controller="VentasCompleta" asp-action="CrearVentaCompleta">Create Nuevo</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.TipoServicio)
+                Tipo de Servicio
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Total)
+                Total
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Efectivo)
+                Efectivo
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Cambio)
+                Cambio
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.UsuarioRegistro)
+                Usuario
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.FechaRegistro)
+                Fecha
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Estado)
+                Estado
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IdClienteNavigation)
+                Cliente
             </th>
             <th></th>
         </tr>
@@ -61,15 +61,14 @@
             <td>
                 @Html.DisplayFor(modelItem => item.FechaRegistro)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Estado)
-            </td>
+                <td>
+                    @(item.Estado == 1 ? "Activo" : "Inactivo")
+                </td>
             <td>
                 @Html.DisplayFor(modelItem => item.IdClienteNavigation.Id)
             </td>
             <td>
                 
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> 
             </td>
         </tr>
 }

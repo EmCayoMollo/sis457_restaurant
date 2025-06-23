@@ -43,36 +43,31 @@
                         <li><a class="color_animation" href="#pricing">Menú de Platillos</a></li>
                         <li><a class="color_animation" href="#beer">Refrescos</a></li>
                         <li><a class="color_animation" href="#contact">Contactanos</a></li>
-                        @if (User.Identity?.IsAuthenticated == false)
-                        {
-                            <li class="nav-item"><a asp-controller="Account" asp-action="Login">Iniciar Sesión</a></li>
-                        }
-                        else
-                        {
-                            <li class="nav-item">
-                                <a class="nav-link me-4" asp-controller="Ventas" asp-action="Index">Ventas</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link me-4" asp-controller="Clientes" asp-action="Index">Clientes</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link me-4" asp-controller="Platillos" asp-action="Index">Platillos</a>
-                            </li>
-                            @*<li class="nav-item"><a href="">Hola @User.Identity?.Name</a></li>*@     
-                               <li class="nav-item">@await Html.PartialAsync("_LogoutPartial")</li>
-                        }
+                            @if (User.Identity?.IsAuthenticated == false)
+                            {
+                                <li class="nav-item"><a asp-controller="Account" asp-action="Login">Iniciar Sesión</a></li>
+                            }
+                            else
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link me-4" asp-controller="Ventas" asp-action="Index">Ventas</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link me-4" asp-controller="Clientes" asp-action="Index">Clientes</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link me-4" asp-controller="Platillos" asp-action="Index">Platillos</a>
+                                </li>
+                                @*<li class="nav-item"><a href="">Hola @User.Identity?.Name</a></li>*@     
+                                    <li class="nav-item">@await Html.PartialAsync("_LogoutPartial")</li>
+                            }
                     </ul>
                 </div>
-                <br></br>
-
             </div>
         </div><!-- /.container-fluid -->
     </nav>
-    <br></br>
-        <br></br>
-        <br></br>
-    
     </header>
+    <br></br>
     <br></br>
     <div class="container">
         <main role="main" class="pb-3">

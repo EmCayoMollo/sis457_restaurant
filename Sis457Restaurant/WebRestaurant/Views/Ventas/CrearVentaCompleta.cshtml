@@ -1,0 +1,314 @@
+﻿@model WebRestaurant.Models.ViewModels.VentaCreateViewModel
+
+@{
+    ViewData["Title"] = "Crear Nueva Venta";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="text-3xl font-bold mb-6 text-gray-800">Crear Nueva Venta</h1>
+
+<h4 class="text-xl font-semibold mb-4 text-gray-700">Detalle de la Venta</h4>
+<hr class="mb-6 border-t-2 border-gray-300" />
+<div class="flex justify-center">
+    <div class="w-full md:w-3/4 lg:w-2/3 bg-white p-8 rounded-lg shadow-xl">
+        <form asp-action="Create" method="post" id="ventaForm" class="space-y-6">
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-4 p-3 bg-red-100 border border-red-400 text-red-700 rounded"></div>
+
+            <!-- Campos del encabezado de la venta -->
+            <div class="form-group">
+                <label asp-for="IdCliente" class="block text-gray-700 text-sm font-bold mb-2">Cliente</label>
+                <select asp-for="IdCliente" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline transition duration-200 ease-in-out" asp-items="Model.Clientes">
+                    <option value="" disabled selected> Seleccione un Cliente </option>
+                </select>
+                <span asp-validation-for="IdCliente" class="text-red-500 text-xs italic mt-1"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TipoServicio" class="block text-gray-700 text-sm font-bold mb-2"></label>
+                <input asp-for="TipoServicio" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline transition duration-200 ease-in-out" placeholder="Ej. Almuerzo, Cena" />
+                <span asp-validation-for="TipoServicio" class="text-red-500 text-xs italic mt-1"></span>
+            </div>
+
+            <!-- Contenedor para los ítems de platillos/refrescos -->
+            <div id="itemsContainer" class="space-y-4">
+                <!-- Los ítems se añadirán aquí dinámicamente por JavaScript -->
+            </div>
+
+            <!-- Botón para añadir más platillos -->
+            <div class="form-group mt-6">
+                <button type="button" id="addPlatilloBtn" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">
+                    Añadir Platillo/Refresco
+                </button>
+            </div>
+
+            <hr class="my-8 border-t-2 border-gray-300" />
+
+            <!-- Resumen de Totales -->
+            <div class="space-y-4">
+                <div class="form-group">
+                    <label asp-for="Total" class="block text-gray-700 text-sm font-bold mb-2">Total </label>
+                    <input asp-for="Total" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-100 cursor-not-allowed" readonly />
+                    <span asp-validation-for="Total" class="text-red-500 text-xs italic mt-1"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Efectivo" class="block text-gray-700 text-sm font-bold mb-2">Efectivo Recibido</label>
+                    <input asp-for="Efectivo" id="efectivo" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline transition duration-200 ease-in-out" type="number" step="0.01" min="0" placeholder="0.00" />
+                    <span asp-validation-for="Efectivo" class="text-red-500 text-xs italic mt-1" id="efectivoValidation"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Cambio" class="block text-gray-700 text-sm font-bold mb-2">Cambio</label>
+                    <input asp-for="Cambio" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-100 cursor-not-allowed" readonly />
+                    <span asp-validation-for="Cambio" class="text-red-500 text-xs italic mt-1"></span>
+                </div>
+            </div>
+
+            <div class="form-group mt-8 text-center">
+                <button type="submit" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-75">
+                    Registrar Venta
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="mt-8 text-center">
+    <a asp-action="Index" asp-controller="Ventas" class="text-blue-600 hover:text-blue-800 transition duration-200 ease-in-out">Volver a la Lista</a>
+</div>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+
+<!-- Plantilla para un solo ítem de platillo/refresco (oculta) -->
+<!-- Se usa 'template' tag para un mejor manejo de contenido no renderizado inicialmente -->
+<template id="platilloItemTemplate">
+    <div class="platillo-item border p-5 mb-4 rounded-lg shadow-md bg-gray-50 relative">
+        <h5 class="text-lg font-semibold mb-4 text-gray-800">Detalle de Venta <span class="item-index-display text-blue-600"></span></h5>
+        <button type="button" class="btn-sm removePlatilloBtn absolute top-3 right-3 bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded-full text-xs transition duration-300 ease-in-out">
+            X
+        </button>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="form-group">
+                <label class="block text-gray-700 text-sm font-bold mb-2">Platillo</label>
+                <select name="Detalles[INDEX].IdPlatillo" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline idPlatilloSelect transition duration-200 ease-in-out">
+                    <option value="" disabled selected> Seleccione un Platillo</option>
+                    @foreach (var platillo in Model.Platillos)
+                    {
+                        <option value="@platillo.Value">@platillo.Text</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="block text-gray-700 text-sm font-bold mb-2">Refresco</label>
+                <select name="Detalles[INDEX].IdRefresco" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline idRefrescoSelect transition duration-200 ease-in-out">
+                    <option value="" disabled selected> Seleccione un Refresco </option>
+                    @foreach (var refresco in Model.Refrescos)
+                    {
+                        <option value="@refresco.Value">@refresco.Text</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+            <div class="form-group">
+                <label class="block text-gray-700 text-sm font-bold mb-2">Precio Unitario</label>
+                <input name="Detalles[INDEX].PrecioUnitario" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline precioUnitarioInput bg-gray-100 cursor-not-allowed" type="number" step="0.01" readonly />
+            </div>
+            <div class="form-group">
+                <label class="block text-gray-700 text-sm font-bold mb-2">Cantidad</label>
+                <input name="Detalles[INDEX].Cantidad" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline cantidadInput transition duration-200 ease-in-out" type="number" value="1" min="1" />
+            </div>
+            <div class="form-group">
+                <label class="block text-gray-700 text-sm font-bold mb-2">Total del Ítem</label>
+                <input name="Detalles[INDEX].Total" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline totalItemInput bg-gray-100 cursor-not-allowed" type="number" step="0.01" readonly />
+            </div>
+        </div>
+        <!-- Este campo IdVenta se llenará con el ID de la venta principal en el controlador (o en JS si se genera en cliente) -->
+        <input type="hidden" name="Detalles[INDEX].IdVenta" class="idVentaHidden" />
+    </div>
+</template>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Configuración de Tailwind CSS para usar el color Inter (si es necesario)
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <script>
+        // Diccionario de precios desde el ViewModel
+        var preciosPlatillos = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.PreciosPlatillos ?? new Dictionary<string, decimal>()));
+        var preciosRefrescos = @Html.Raw(System.Text.Json.JsonSerializer.Serialize(Model.PreciosRefrescos ?? new Dictionary<string, decimal>()));
+
+        let itemIndex = 0; // Contador para el índice de los ítems del formulario
+
+        function addPlatilloItem() {
+            const template = document.getElementById("platilloItemTemplate");
+            // Usar .content para las etiquetas <template>
+            const newItemContent = template.content.cloneNode(true);
+            const itemDiv = newItemContent.querySelector('.platillo-item');
+
+            // Actualiza los nombres de los campos con el índice actual
+            itemDiv.querySelectorAll('[name*="[INDEX]"]').forEach(element => {
+                element.name = element.name.replace('[INDEX]', `[${itemIndex}]`);
+            });
+
+            // Actualiza el display del índice del ítem
+            itemDiv.querySelector('.item-index-display').textContent = itemIndex + 1;
+
+            // Obtener las listas desplegables de la plantilla
+            const idPlatilloSelect = itemDiv.querySelector('.idPlatilloSelect');
+            const idRefrescoSelect = itemDiv.querySelector('.idRefrescoSelect');
+
+            // Set default option for new select elements to empty
+            if (idPlatilloSelect) idPlatilloSelect.value = '';
+            if (idRefrescoSelect) idRefrescoSelect.value = '';
+
+            // Asocia los eventos a los nuevos elementos clonados
+            idPlatilloSelect.addEventListener("change", (e) => updateItemPriceAndTotal(e.target));
+            idRefrescoSelect.addEventListener("change", (e) => updateItemPriceAndTotal(e.target));
+            itemDiv.querySelector('.cantidadInput').addEventListener("input", (e) => updateItemPriceAndTotal(e.target));
+
+            // Manejar el botón de eliminar
+            itemDiv.querySelector('.removePlatilloBtn').addEventListener('click', function() {
+                itemDiv.remove();
+                calculateGrandTotal(); // Recalcular total después de eliminar
+                updateItemIndexes(); // Actualizar índices después de eliminar
+            });
+
+            // Añade el nuevo ítem al contenedor
+            document.getElementById("itemsContainer").appendChild(itemDiv);
+
+            // Inicializa los valores y calcula el total para el nuevo ítem
+            updateItemPriceAndTotal(idPlatilloSelect); // Pasa cualquier elemento para iniciar el cálculo
+
+            itemIndex++; // Incrementa el contador para el próximo ítem
+        }
+
+        /**
+         * Actualiza los índices de los campos 'name' después de eliminar un ítem.
+         */
+        function updateItemIndexes() {
+            let currentItemIndex = 0;
+            document.querySelectorAll('#itemsContainer .platillo-item').forEach(itemDiv => {
+                itemDiv.querySelector('.item-index-display').textContent = currentItemIndex + 1;
+                itemDiv.querySelectorAll('[name*="Detalles"]').forEach(element => {
+                    // Regex para reemplazar el número entre corchetes
+                    element.name = element.name.replace(/\[\d+\]/, `[${currentItemIndex}]`);
+                });
+                currentItemIndex++;
+            });
+            itemIndex = currentItemIndex; // Sincronizar el contador global
+        }
+
+        
+        function updateItemPriceAndTotal(changedElement) {
+            const itemDiv = changedElement.closest('.platillo-item');
+            if (!itemDiv) return;
+
+            const idPlatillo = itemDiv.querySelector('.idPlatilloSelect').value;
+            const idRefresco = itemDiv.querySelector('.idRefrescoSelect').value;
+            const cantidad = parseFloat(itemDiv.querySelector('.cantidadInput').value) || 0;
+            const precioUnitarioInput = itemDiv.querySelector('.precioUnitarioInput');
+            const totalItemInput = itemDiv.querySelector('.totalItemInput');
+
+            let precio = 0;
+            // Asegurarse de que el elemento seleccionado tiene un valor válido antes de acceder al diccionario
+            if (idPlatillo && preciosPlatillos[idPlatillo] !== undefined) {
+                precio += parseFloat(preciosPlatillos[idPlatillo]);
+            }
+            if (idRefresco && preciosRefrescos[idRefresco] !== undefined) {
+                precio += parseFloat(preciosRefrescos[idRefresco]);
+            }
+
+            // Si ninguno está seleccionado, el precio es 0
+            if (!idPlatillo && !idRefresco) {
+                 precio = 0;
+            }
+
+            precioUnitarioInput.value = precio.toFixed(2);
+            totalItemInput.value = (precio * cantidad).toFixed(2);
+
+            calculateGrandTotal(); // Recalcular el total general cada vez que un ítem cambia
+        }
+
+        /**
+         * Calcula el total general de todos los ítems de la venta.
+         */
+        function calculateGrandTotal() {
+            let grandTotal = 0;
+            document.querySelectorAll('.totalItemInput').forEach(input => {
+                grandTotal += parseFloat(input.value) || 0;
+            });
+            document.getElementById('Total').value = grandTotal.toFixed(2); // Mapea al campo Total del ViewModel
+            calculateCambio(); // Recalcular cambio después de actualizar el total general
+        }
+
+        /**
+         * Calcula el cambio a devolver.
+         */
+        function calculateCambio() {
+            const efectivo = parseFloat(document.getElementById('efectivo').value) || 0;
+            const grandTotal = parseFloat(document.getElementById('Total').value) || 0; // Lee del campo Total
+            let cambio = 0;
+
+            const efectivoValidation = document.getElementById('efectivoValidation');
+            if (efectivo < grandTotal) {
+                efectivoValidation.textContent = 'El efectivo es menor que el total de la venta.';
+                efectivoValidation.style.color = 'red';
+                document.getElementById('Cambio').value = '0.00'; // Mapea al campo Cambio del ViewModel
+            } else {
+                cambio = (efectivo - grandTotal).toFixed(2);
+                efectivoValidation.textContent = '';
+                document.getElementById('Cambio').value = cambio; // Mapea al campo Cambio del ViewModel
+            }
+        }
+
+        // Event Listeners
+        document.getElementById('addPlatilloBtn').addEventListener('click', addPlatilloItem);
+        document.getElementById('efectivo').addEventListener('input', calculateCambio);
+
+        // Inicializar: Añadir al menos un ítem cuando la página carga
+        document.addEventListener("DOMContentLoaded", function () {
+            addPlatilloItem(); // Add one item on load
+            calculateGrandTotal(); // Ensure initial total is correct
+        });
+
+        // Validación final antes de enviar el formulario
+        document.getElementById('ventaForm').addEventListener('submit', function(event) {
+            const grandTotal = parseFloat(document.getElementById('Total').value) || 0;
+            const efectivo = parseFloat(document.getElementById('efectivo').value) || 0;
+
+            // Comprobar que haya al menos un ítem válido añadido
+            const validItems = Array.from(document.querySelectorAll('#itemsContainer .platillo-item')).filter(itemDiv => {
+                const idPlatillo = itemDiv.querySelector('.idPlatilloSelect').value;
+                const idRefresco = itemDiv.querySelector('.idRefrescoSelect').value;
+                const cantidad = parseFloat(itemDiv.querySelector('.cantidadInput').value) || 0;
+                return (idPlatillo || idRefresco) && cantidad > 0;
+            }).length;
+
+            if (validItems === 0) {
+                console.error("No se puede registrar la venta: debe añadir al menos un platillo o refresco válido.");
+                alert("Debe añadir al menos un platillo o refresco a la venta."); // Usar un modal en producción
+                event.preventDefault(); // Previene el envío del formulario
+                return;
+            }
+
+            if (efectivo < grandTotal) {
+                console.error("No se puede registrar la venta: el efectivo es insuficiente.");
+                document.getElementById('efectivoValidation').textContent = 'El efectivo es insuficiente para completar la venta.';
+                document.getElementById('efectivoValidation').style.color = 'red';
+                event.preventDefault(); // Previene el envío del formulario
+            }
+        });
+    </script>
+}

@@ -99,6 +99,9 @@
     <Compile Include="Venta.cs">
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
+    <Compile Include="VentaDetalle.cs">
+      <DependentUpon>Modelo.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

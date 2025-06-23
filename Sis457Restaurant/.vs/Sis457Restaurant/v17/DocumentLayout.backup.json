@@ -1,99 +1,443 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\SIS457Restaurant\\sis457_restaurant\\Sis457Restaurant\\",
+  "WorkspaceRootPath": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3A1ECA10-3948-44E4-8105-13F40A62C51B}|WebRestaurante\\WebRestaurante.csproj|c:\\sis457restaurant\\sis457_restaurant\\sis457restaurant\\webrestaurante\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3A1ECA10-3948-44E4-8105-13F40A62C51B}|WebRestaurante\\WebRestaurante.csproj|solutionrelative:webrestaurante\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|c:\\users\\edzon\\desktop\\sis457_restaurant\\sis457restaurant\\webrestaurant\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|solutionrelative:webrestaurant\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3A1ECA10-3948-44E4-8105-13F40A62C51B}|WebRestaurante\\WebRestaurante.csproj|c:\\sis457restaurant\\sis457_restaurant\\sis457restaurant\\webrestaurante\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3A1ECA10-3948-44E4-8105-13F40A62C51B}|WebRestaurante\\WebRestaurante.csproj|solutionrelative:webrestaurante\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|c:\\users\\edzon\\desktop\\sis457_restaurant\\sis457restaurant\\webrestaurant\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|solutionrelative:webrestaurant\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\SIS457Restaurant\\sis457_restaurant\\FinalRestaurant.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+      "AbsoluteMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|c:\\users\\edzon\\desktop\\sis457_restaurant\\sis457restaurant\\webrestaurant\\views\\shared\\_logoutpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|solutionrelative:webrestaurant\\views\\shared\\_logoutpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3A1ECA10-3948-44E4-8105-13F40A62C51B}|WebRestaurante\\WebRestaurante.csproj|c:\\sis457restaurant\\sis457_restaurant\\sis457restaurant\\webrestaurante\\controllers\\ventascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3A1ECA10-3948-44E4-8105-13F40A62C51B}|WebRestaurante\\WebRestaurante.csproj|solutionrelative:webrestaurante\\controllers\\ventascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|c:\\users\\edzon\\desktop\\sis457_restaurant\\sis457restaurant\\webrestaurant\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|solutionrelative:webrestaurant\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3A1ECA10-3948-44E4-8105-13F40A62C51B}|WebRestaurante\\WebRestaurante.csproj|c:\\sis457restaurant\\sis457_restaurant\\sis457restaurant\\webrestaurante\\controllers\\platilloscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3A1ECA10-3948-44E4-8105-13F40A62C51B}|WebRestaurante\\WebRestaurante.csproj|solutionrelative:webrestaurante\\controllers\\platilloscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|c:\\users\\edzon\\desktop\\sis457_restaurant\\sis457restaurant\\webrestaurant\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|solutionrelative:webrestaurant\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\SIS457Restaurant\\sis457_restaurant\\FinalRestaurant.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+      "AbsoluteMoniker": "D:0:0:{3A1ECA10-3948-44E4-8105-13F40A62C51B}|WebRestaurante\\WebRestaurante.csproj|c:\\users\\edzon\\desktop\\sis457_restaurant\\sis457restaurant\\webrestaurante\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A1ECA10-3948-44E4-8105-13F40A62C51B}|WebRestaurante\\WebRestaurante.csproj|solutionrelative:webrestaurante\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|c:\\users\\edzon\\desktop\\sis457_restaurant\\sis457restaurant\\webrestaurant\\models\\accountviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|solutionrelative:webrestaurant\\models\\accountviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|c:\\users\\edzon\\desktop\\sis457_restaurant\\sis457restaurant\\webrestaurant\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|solutionrelative:webrestaurant\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|c:\\users\\edzon\\desktop\\sis457_restaurant\\sis457restaurant\\webrestaurant\\controllers\\ventascompletacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|solutionrelative:webrestaurant\\controllers\\ventascompletacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|c:\\users\\edzon\\desktop\\sis457_restaurant\\sis457restaurant\\webrestaurant\\controllers\\ventascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|solutionrelative:webrestaurant\\controllers\\ventascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|c:\\users\\edzon\\desktop\\sis457_restaurant\\sis457restaurant\\webrestaurant\\models\\ventadetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|solutionrelative:webrestaurant\\models\\ventadetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|c:\\users\\edzon\\desktop\\sis457_restaurant\\sis457restaurant\\webrestaurant\\views\\ventadetalles\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|solutionrelative:webrestaurant\\views\\ventadetalles\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|c:\\users\\edzon\\desktop\\sis457_restaurant\\sis457restaurant\\webrestaurant\\views\\ventas\\crearventacompleta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|solutionrelative:webrestaurant\\views\\ventas\\crearventacompleta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|c:\\users\\edzon\\desktop\\sis457_restaurant\\sis457restaurant\\webrestaurant\\views\\ventas\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|solutionrelative:webrestaurant\\views\\ventas\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|c:\\users\\edzon\\desktop\\sis457_restaurant\\sis457restaurant\\webrestaurant\\views\\ventas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|solutionrelative:webrestaurant\\views\\ventas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|c:\\users\\edzon\\desktop\\sis457_restaurant\\sis457restaurant\\webrestaurant\\models\\ventum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|solutionrelative:webrestaurant\\models\\ventum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|c:\\users\\edzon\\desktop\\sis457_restaurant\\sis457restaurant\\webrestaurant\\models\\ventacreateviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|solutionrelative:webrestaurant\\models\\ventacreateviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|c:\\users\\edzon\\desktop\\sis457_restaurant\\sis457restaurant\\webrestaurant\\controllers\\ventadetallescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|solutionrelative:webrestaurant\\controllers\\ventadetallescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|c:\\users\\edzon\\desktop\\sis457_restaurant\\sis457restaurant\\webrestaurant\\controllers\\platilloscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|solutionrelative:webrestaurant\\controllers\\platilloscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|c:\\users\\edzon\\desktop\\sis457_restaurant\\sis457restaurant\\webrestaurant\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|solutionrelative:webrestaurant\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|c:\\users\\edzon\\desktop\\sis457_restaurant\\sis457restaurant\\webrestaurant\\views\\clientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|solutionrelative:webrestaurant\\views\\clientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A1ECA10-3948-44E4-8105-13F40A62C51B}|WebRestaurante\\WebRestaurante.csproj|c:\\users\\edzon\\desktop\\sis457_restaurant\\sis457restaurant\\webrestaurante\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A1ECA10-3948-44E4-8105-13F40A62C51B}|WebRestaurante\\WebRestaurante.csproj|solutionrelative:webrestaurante\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Models\\FinalRestaurantContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WebRestaurant\\Models\\FinalRestaurantContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|c:\\users\\edzon\\desktop\\sis457_restaurant\\sis457restaurant\\webrestaurant\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{050480B5-E7B7-4409-A12C-66EB92225A68}|WebRestaurant\\WebRestaurant.csproj|solutionrelative:webrestaurant\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 0,
+      "Orientation": 1,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "DockedHeight": 200,
+          "SelectedChildIndex": 9,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebRestaurant\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "WebRestaurant\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-23T19:15:08.436Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "VentasController.cs",
-              "DocumentMoniker": "C:\\SIS457Restaurant\\sis457_restaurant\\Sis457Restaurant\\WebRestaurante\\Controllers\\VentasController.cs",
-              "RelativeDocumentMoniker": "WebRestaurante\\Controllers\\VentasController.cs",
-              "ToolTip": "C:\\SIS457Restaurant\\sis457_restaurant\\Sis457Restaurant\\WebRestaurante\\Controllers\\VentasController.cs",
-              "RelativeToolTip": "WebRestaurante\\Controllers\\VentasController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "WebRestaurant\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "WebRestaurant\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAswCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-23T19:12:46.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurante\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "WebRestaurante\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurante\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "WebRestaurante\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAAAG8AAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T19:38:45.163Z",
+              "WhenOpened": "2025-06-23T19:11:10.709Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "PlatillosController.cs",
-              "DocumentMoniker": "C:\\SIS457Restaurant\\sis457_restaurant\\Sis457Restaurant\\WebRestaurante\\Controllers\\PlatillosController.cs",
-              "RelativeDocumentMoniker": "WebRestaurante\\Controllers\\PlatillosController.cs",
-              "ToolTip": "C:\\SIS457Restaurant\\sis457_restaurant\\Sis457Restaurant\\WebRestaurante\\Controllers\\PlatillosController.cs",
-              "RelativeToolTip": "WebRestaurante\\Controllers\\PlatillosController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "WebRestaurant\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "WebRestaurant\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAkwCEAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T19:37:37.554Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\SIS457Restaurant\\sis457_restaurant\\Sis457Restaurant\\WebRestaurante\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "WebRestaurante\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\SIS457Restaurant\\sis457_restaurant\\Sis457Restaurant\\WebRestaurante\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "WebRestaurante\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAAAHIAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-19T22:52:05.397Z",
+              "WhenOpened": "2025-06-23T19:09:40.562Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\SIS457Restaurant\\sis457_restaurant\\Sis457Restaurant\\WebRestaurante\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebRestaurante\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\SIS457Restaurant\\sis457_restaurant\\Sis457Restaurant\\WebRestaurante\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "WebRestaurante\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAIwAAAAAAAAAAAAYwJ4AAAAAAAAAAAAAAA==",
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "WebRestaurant\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Views\\Shared\\_Layout.cshtml*",
+              "RelativeToolTip": "WebRestaurant\\Views\\Shared\\_Layout.cshtml*",
+              "ViewState": "AgIAADEAAAAAAAAAAAAIwEEAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-21T21:42:04.735Z",
+              "WhenOpened": "2025-06-23T19:00:43.029Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "FinalRestaurant.sql ",
-              "DocumentMoniker": "C:\\SIS457Restaurant\\sis457_restaurant\\FinalRestaurant.sql",
-              "RelativeDocumentMoniker": "..\\FinalRestaurant.sql",
-              "ToolTip": "FinalRestaurant.sql ",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-06-21T21:42:44.23Z",
+              "Title": "_LogoutPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Views\\Shared\\_LogoutPartial.cshtml",
+              "RelativeDocumentMoniker": "WebRestaurant\\Views\\Shared\\_LogoutPartial.cshtml",
+              "ToolTip": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Views\\Shared\\_LogoutPartial.cshtml",
+              "RelativeToolTip": "WebRestaurant\\Views\\Shared\\_LogoutPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-23T19:14:07.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AccountViewModels.cs",
+              "DocumentMoniker": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Models\\AccountViewModels.cs",
+              "RelativeDocumentMoniker": "WebRestaurant\\Models\\AccountViewModels.cs",
+              "ToolTip": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Models\\AccountViewModels.cs",
+              "RelativeToolTip": "WebRestaurant\\Models\\AccountViewModels.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T19:08:39.512Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "VentasCompletaController.cs",
+              "DocumentMoniker": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Controllers\\VentasCompletaController.cs",
+              "RelativeDocumentMoniker": "WebRestaurant\\Controllers\\VentasCompletaController.cs",
+              "ToolTip": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Controllers\\VentasCompletaController.cs",
+              "RelativeToolTip": "WebRestaurant\\Controllers\\VentasCompletaController.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAAAEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T17:40:18.898Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CrearVentaCompleta.cshtml",
+              "DocumentMoniker": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Views\\Ventas\\CrearVentaCompleta.cshtml",
+              "RelativeDocumentMoniker": "WebRestaurant\\Views\\Ventas\\CrearVentaCompleta.cshtml",
+              "ToolTip": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Views\\Ventas\\CrearVentaCompleta.cshtml",
+              "RelativeToolTip": "WebRestaurant\\Views\\Ventas\\CrearVentaCompleta.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAqwBQAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-23T16:56:22.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Views\\VentaDetalles\\Create.cshtml",
+              "RelativeDocumentMoniker": "WebRestaurant\\Views\\VentaDetalles\\Create.cshtml",
+              "ToolTip": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Views\\VentaDetalles\\Create.cshtml",
+              "RelativeToolTip": "WebRestaurant\\Views\\VentaDetalles\\Create.cshtml",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAAB8AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-23T16:49:14.758Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "VentaDetalle.cs",
+              "DocumentMoniker": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Models\\VentaDetalle.cs",
+              "RelativeDocumentMoniker": "WebRestaurant\\Models\\VentaDetalle.cs",
+              "ToolTip": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Models\\VentaDetalle.cs",
+              "RelativeToolTip": "WebRestaurant\\Models\\VentaDetalle.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAQwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T17:44:53.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Program.cs",
+              "RelativeDocumentMoniker": "WebRestaurant\\Program.cs",
+              "ToolTip": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Program.cs",
+              "RelativeToolTip": "WebRestaurant\\Program.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACEAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T16:15:28.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "VentasController.cs",
+              "DocumentMoniker": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Controllers\\VentasController.cs",
+              "RelativeDocumentMoniker": "WebRestaurant\\Controllers\\VentasController.cs",
+              "ToolTip": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Controllers\\VentasController.cs",
+              "RelativeToolTip": "WebRestaurant\\Controllers\\VentasController.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAAAD4AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T16:24:34.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Views\\Ventas\\Create.cshtml",
+              "RelativeDocumentMoniker": "WebRestaurant\\Views\\Ventas\\Create.cshtml",
+              "ToolTip": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Views\\Ventas\\Create.cshtml",
+              "RelativeToolTip": "WebRestaurant\\Views\\Ventas\\Create.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAkwC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-23T16:47:02.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Views\\Ventas\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebRestaurant\\Views\\Ventas\\Index.cshtml",
+              "ToolTip": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Views\\Ventas\\Index.cshtml",
+              "RelativeToolTip": "WebRestaurant\\Views\\Ventas\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-23T16:57:16.357Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "VentaCreateViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Models\\VentaCreateViewModel.cs",
+              "RelativeDocumentMoniker": "WebRestaurant\\Models\\VentaCreateViewModel.cs",
+              "ToolTip": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Models\\VentaCreateViewModel.cs",
+              "RelativeToolTip": "WebRestaurant\\Models\\VentaCreateViewModel.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAswEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T16:53:04.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Ventum.cs",
+              "DocumentMoniker": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Models\\Ventum.cs",
+              "RelativeDocumentMoniker": "WebRestaurant\\Models\\Ventum.cs",
+              "ToolTip": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Models\\Ventum.cs",
+              "RelativeToolTip": "WebRestaurant\\Models\\Ventum.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T17:15:00.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Views\\Clientes\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebRestaurant\\Views\\Clientes\\Index.cshtml",
+              "ToolTip": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Views\\Clientes\\Index.cshtml",
+              "RelativeToolTip": "WebRestaurant\\Views\\Clientes\\Index.cshtml",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-23T16:30:52.583Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "VentaDetallesController.cs",
+              "DocumentMoniker": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Controllers\\VentaDetallesController.cs",
+              "RelativeDocumentMoniker": "WebRestaurant\\Controllers\\VentaDetallesController.cs",
+              "ToolTip": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Controllers\\VentaDetallesController.cs",
+              "RelativeToolTip": "WebRestaurant\\Controllers\\VentaDetallesController.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAAAEQAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T16:26:24.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ClientesController.cs",
+              "DocumentMoniker": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Controllers\\ClientesController.cs",
+              "RelativeDocumentMoniker": "WebRestaurant\\Controllers\\ClientesController.cs",
+              "ToolTip": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Controllers\\ClientesController.cs",
+              "RelativeToolTip": "WebRestaurant\\Controllers\\ClientesController.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAADkAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T16:19:27.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "PlatillosController.cs",
+              "DocumentMoniker": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Controllers\\PlatillosController.cs",
+              "RelativeDocumentMoniker": "WebRestaurant\\Controllers\\PlatillosController.cs",
+              "ToolTip": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Controllers\\PlatillosController.cs",
+              "RelativeToolTip": "WebRestaurant\\Controllers\\PlatillosController.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAcwDsAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T16:18:28.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurante\\Program.cs",
+              "RelativeDocumentMoniker": "WebRestaurante\\Program.cs",
+              "ToolTip": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurante\\Program.cs",
+              "RelativeToolTip": "WebRestaurante\\Program.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAQwCAAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T16:15:10.898Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "FinalRestaurantContext.cs",
+              "DocumentMoniker": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Models\\FinalRestaurantContext.cs",
+              "RelativeDocumentMoniker": "WebRestaurant\\Models\\FinalRestaurantContext.cs",
+              "ToolTip": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\Models\\FinalRestaurantContext.cs",
+              "RelativeToolTip": "WebRestaurant\\Models\\FinalRestaurantContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T16:14:23.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\appsettings.json",
+              "RelativeDocumentMoniker": "WebRestaurant\\appsettings.json",
+              "ToolTip": "C:\\Users\\edzon\\Desktop\\sis457_restaurant\\Sis457Restaurant\\WebRestaurant\\appsettings.json",
+              "RelativeToolTip": "WebRestaurant\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-23T16:09:44.076Z",
               "EditorCaption": ""
             }
           ]

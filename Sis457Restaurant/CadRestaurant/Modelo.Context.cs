@@ -35,5 +35,6 @@ namespace CadRestaurant
         public virtual DbSet<Refresco> Refresco { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
         public virtual DbSet<Venta> Venta { get; set; }
+        public virtual DbSet<VentaDetalle> VentaDetalle { get; set; }
     }
 }

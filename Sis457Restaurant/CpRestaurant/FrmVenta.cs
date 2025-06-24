@@ -21,7 +21,18 @@ namespace CpRestaurant
 
 		private void listarVenta()
 		{
-			var lista = VentaCln.listar();
+			var lista = VentaCln.listar().Select(x => new {
+				x.id,
+				Cliente = x.Cliente != null ? x.Cliente.nombreCompleto : "", // o x.Cliente.nombres según tu modelo
+				Platillo = x.Platillo != null ? x.Platillo.nombre : "",
+				x.precioUnitario,
+				x.cantidad,
+				x.total,
+				x.efectivo,
+				x.cambio,
+				x.usuarioRegistro,
+				x.fechaRegistro
+			}).ToList();
 			dgvHistorial.DataSource = lista;
 			dgvHistorial.Columns["Cliente"].HeaderText="Nombre del Cliente";
 			dgvHistorial.Columns["Platillo"].HeaderText = "Nombre de Platillo";
@@ -105,7 +116,13 @@ namespace CpRestaurant
 		{
 			if (validar()) {
 				var venta = new Venta();
-				
+				venta.idPlatillo = Convert.ToInt32(cbxPlatillos.SelectedValue);
+				venta.idCliente = Convert.ToInt32(cbxCi.SelectedValue);
+				venta.precioUnitario = nudPrecioUnitario.Value;
+				venta.cantidad = (int)nudCantidad.Value;
+				venta.total = nudTotal.Value;
+				venta.efectivo = nudEfectivo.Value;
+				venta.cambio = nudCambio.Value;
 				venta.usuarioRegistro = Util.usuario.usuario1;
 				venta.fechaRegistro = DateTime.Now;
 				venta.estado = 1;

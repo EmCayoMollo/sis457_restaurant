@@ -1,0 +1,275 @@
+﻿@model IEnumerable<WebRestaurante.Models.Ventum>
+@{
+    ViewData["Title"] = "Panel de Ventas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var listaPlatillos = ViewBag.Platillos as List<WebRestaurante.Models.Platillo>;
+    var listaClientes = ViewBag.Clientes as SelectList;
+}
+
+<div class="container my-4">
+    <div class="row mb-4">
+        <div class="col">
+            <h2 class="text-primary"><i class="fa fa-shopping-cart"></i> Nueva Transacción</h2>
+        </div>
+    </div>
+    <div class="card border-0 shadow-sm mb-5" style="border-radius: 18px;">
+        <div class="card-body">
+            <form id="ventaForm" asp-action="AgregarVentaMultiple" method="post" autocomplete="off">
+                <div class="row g-4 mb-3">
+                    <div class="col-md-5">
+                        <label class="form-label">Buscar persona</label>
+                        <input type="text" id="filtroCliente" class="form-control mb-1" placeholder="Filtrar cliente..." />
+                        <select id="ClienteSeleccionado" name="IdCliente" class="form-select" required>
+                            <option value=""> Elija un cliente </option>
+                            @foreach (var c in listaClientes)
+                            {
+                                <option value="@c.Value">@c.Text</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Fecha y hora</label>
+                        <input type="text" class="form-control" value="@DateTime.Now.ToString("yyyy-MM-dd HH:mm")" readonly />
+                    </div>
+                </div>
+                <hr />
+                <div class="row g-4 align-items-end mb-3">
+                    <div class="col-md-4">
+                        <label class="form-label">Platillo a vender</label>
+                        <select id="PlatilloSeleccionado" class="form-select">
+                            <option value=""> Seleccione platillo </option>
+                            @foreach (var p in listaPlatillos)
+                            {
+                                <option value="@p.Id" data-precio="@p.Precio">@p.Nombre</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Unidades</label>
+                        <input type="number" id="Unidades" class="form-control" min="1" value="1" />
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Precio Bs</label>
+                        <input type="number" id="PrecioUnitario" class="form-control" readonly />
+                    </div>
+                    <div class="col-md-2 d-grid">
+                        <button type="button" id="btnAgregarItem" class="btn btn-outline-primary">
+                            <i class="fa fa-plus"></i> Añadir
+                        </button>
+                    </div>
+                </div>
+                <div class="table-responsive mb-4">
+                    <table class="table table-striped" id="tablaItems">
+                        <thead class="table-light">
+                            <tr>
+                                
+                                <th>Eliminar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Detalle dinámico -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row g-4 mb-3">
+                    <div class="col-md-3">
+                        <label class="form-label">Pago recibido</label>
+                        <input type="number" id="PagoRecibido" class="form-control" min="0" step="0.01" />
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Importe total</label>
+                        <input type="text" id="ImporteTotal" name="Total" class="form-control" readonly />
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Vuelto</label>
+                        <input type="text" id="Vuelto" class="form-control" readonly />
+                    </div>
+                </div>
+                <input type="hidden" id="DetalleVentaJson" name="DetalleJson" />
+                <div class="d-flex justify-content-end mt-4">
+                    <button type="submit" class="btn btn-success px-4">
+                        <i class="fa fa-check"></i> Registrar venta
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <h4 class="mb-3">Historial de Ventas</h4>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover align-middle">
+            <thead class="table-secondary">
+                <tr>
+                    <th>Platillo</th>
+                    <th>Cliente</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Total</th>
+                    <th>Pago</th>
+                    <th>Vuelto</th>
+                    <th>Usuario</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var venta in Model)
+                {
+                    <tr>
+                        <td>@venta.IdPlatilloNavigation?.Nombre</td>
+                        <td>@venta.IdClienteNavigation?.NombreCompleto</td>
+                        <td>@venta.PrecioUnitario</td>
+                        <td>@venta.Cantidad</td>
+                        <td>@venta.Total</td>
+                        <td>@venta.Efectivo</td>
+                        <td>@venta.Cambio</td>
+                        <td>@venta.UsuarioRegistro</td>
+                        <td>@venta.FechaRegistro.ToString("dd/MM/yyyy HH:mm")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        let items = [];
+
+        // Mostrar precio al seleccionar platillo
+        $('#PlatilloSeleccionado').on('change', function () {
+            const precio = $('option:selected', this).data('precio') || 0;
+            $('#PrecioUnitario').val(precio);
+        });
+
+        // Añadir platillo al detalle
+        $('#btnAgregarItem').on('click', function (e) {
+            e.preventDefault();
+            const idPlatillo = $('#PlatilloSeleccionado').val();
+            const nombrePlatillo = $('#PlatilloSeleccionado option:selected').text();
+            const precio = parseFloat($('#PrecioUnitario').val());
+            const cantidad = parseInt($('#Unidades').val());
+
+            if (!idPlatillo || isNaN(precio) || isNaN(cantidad) || cantidad < 1) {
+                alert('Seleccione un platillo y cantidad válida.');
+                return;
+            }
+
+            // Si ya existe, suma cantidad
+            const existente = items.find(d => d.idPlatillo == idPlatillo);
+            if (existente) {
+                existente.cantidad += cantidad;
+                existente.total = existente.cantidad * existente.precioUnitario;
+            } else {
+                items.push({
+                    idPlatillo: idPlatillo,
+                    nombrePlatillo: nombrePlatillo,
+                    cantidad: cantidad,
+                    precioUnitario: precio,
+                    total: cantidad * precio
+                });
+            }
+
+            renderItems();
+            limpiarPlatillo();
+        });
+
+        // Eliminar platillo del detalle
+        $('#tablaItems').on('click', '.btn-eliminar', function () {
+            const idPlatillo = $(this).data('id');
+            items = items.filter(d => d.idPlatillo != idPlatillo);
+            renderItems();
+        });
+
+        // Calcular vuelto al escribir pago
+        $('#PagoRecibido').on('input', function () {
+            calcularVuelto();
+        });
+
+        // Renderizar detalle y calcular total
+        function renderItems() {
+            let html = '';
+            let total = 0;
+            items.forEach(d => {
+                html += `<tr>
+                    <td>${d.nombrePlatillo}</td>
+                    <td>${d.cantidad}</td>
+                    <td>${d.precioUnitario.toFixed(2)}</td>
+                    <td>${d.total.toFixed(2)}</td>
+                    <td><button type="button" class="btn btn-danger btn-sm btn-eliminar" data-id="${d.idPlatillo}"><i class="fa fa-trash"></i></button></td>
+                </tr>`;
+                total += d.total;
+            });
+            $('#tablaItems tbody').html(html);
+            $('#ImporteTotal').val(total.toFixed(2));
+            calcularVuelto();
+            $('#DetalleVentaJson').val(JSON.stringify(items));
+        }
+
+        // Calcular vuelto
+        function calcularVuelto() {
+            const total = parseFloat($('#ImporteTotal').val()) || 0;
+            const pago = parseFloat($('#PagoRecibido').val()) || 0;
+            const vuelto = pago - total;
+            $('#Vuelto').val(vuelto >= 0 ? vuelto.toFixed(2) : '0.00');
+        }
+
+        // Limpiar selección de platillo
+        function limpiarPlatillo() {
+            $('#PlatilloSeleccionado').val('');
+            $('#PrecioUnitario').val('');
+            $('#Unidades').val(1);
+        }
+
+        // Validar antes de enviar
+        $('#ventaForm').on('submit', function () {
+            if (items.length === 0) {
+                alert('Debe añadir al menos un platillo.');
+                return false;
+            }
+            if ($('#PagoRecibido').val() === '' || parseFloat($('#PagoRecibido').val()) < parseFloat($('#ImporteTotal').val())) {
+                alert('El pago recibido no puede ser menor al total.');
+                return false;
+            }
+            $('#DetalleVentaJson').val(JSON.stringify(items));
+            return true;
+        });
+
+        // Filtro de clientes en el select
+        $('#filtroCliente').on('keyup', function () {
+            var filtro = $(this).val().toLowerCase();
+            $('#ClienteSeleccionado option').each(function () {
+                if ($(this).val() === "") return;
+                var texto = $(this).text().toLowerCase();
+                $(this).toggle(texto.indexOf(filtro) > -1);
+            });
+            if ($('#ClienteSeleccionado option:visible').length === 1) {
+                $('#ClienteSeleccionado').val('');
+            }
+        });
+
+          // Calcular vuelto
+        function calcularVuelto() {
+            const total = parseFloat($('#ImporteTotal').val()) || 0;
+            const pago = parseFloat($('#PagoRecibido').val()) || 0;
+            let vuelto = pago - total;
+            if (vuelto < 0) vuelto = 0;
+            $('#Vuelto').val(vuelto.toFixed(2));
+        }
+
+        // Validar antes de enviar
+        $('#ventaForm').on('submit', function () {
+            if (items.length === 0) {
+                alert('Debe añadir al menos un platillo.');
+                return false;
+            }
+            const total = parseFloat($('#ImporteTotal').val()) || 0;
+            const pago = parseFloat($('#PagoRecibido').val()) || 0;
+            if ($('#PagoRecibido').val() === '' || pago < total) {
+                alert('El pago recibido no puede ser menor al total.');
+                return false;
+            }
+            $('#DetalleVentaJson').val(JSON.stringify(items));
+            return true;
+        });
+    </script>
+}

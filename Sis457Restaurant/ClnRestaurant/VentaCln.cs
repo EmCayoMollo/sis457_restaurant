@@ -37,7 +37,7 @@ namespace ClnRestaurant
 			using (var context = new FinalRestaurantEntities())
 			{
 				return context.Venta.Include(x => x.Cliente)
-			.Include(x => x.Cliente).Where(x => x.estado != -1).ToList();
+			.Include(x => x.Platillo).Where(x => x.estado != -1).ToList();
 			}
 		}
 

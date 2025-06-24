@@ -17,19 +17,18 @@ namespace CadRestaurant
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Platillo()
         {
-            this.VentaDetalle = new HashSet<VentaDetalle>();
+            this.Venta = new HashSet<Venta>();
         }
     
         public int id { get; set; }
         public string codigo { get; set; }
         public string nombre { get; set; }
         public decimal precio { get; set; }
-        public decimal alertaDisponibilidad { get; set; }
         public string usuarioRegistro { get; set; }
         public System.DateTime fechaRegistro { get; set; }
         public short estado { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<VentaDetalle> VentaDetalle { get; set; }
+        public virtual ICollection<Venta> Venta { get; set; }
     }
 }

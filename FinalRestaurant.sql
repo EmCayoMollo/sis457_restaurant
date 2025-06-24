@@ -23,7 +23,6 @@ DROP TABLE Proveedor;
 DROP TABLE Insumo;
 DROP TABLE Compra;
 DROP TABLE CompraDetalle;
-DROP TABLE Venta;
 DROP TABLE VentaDetalle;
 DROP TABLE Cliente;
 
@@ -31,8 +30,7 @@ CREATE TABLE Platillo(
     id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
     codigo VARCHAR(10) NOT NULL,
     nombre VARCHAR(30) NOT NULL,
-    precio DECIMAL NOT NULL CHECK (precio>0),
-    alertaDisponibilidad DECIMAL NOT NULL DEFAULT 0
+    precio DECIMAL NOT NULL CHECK (precio>0)
 );
 CREATE TABLE Refresco(
     id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
@@ -96,29 +94,21 @@ CREATE TABLE CompraDetalle (
   CONSTRAINT fk_CompreDetalle FOREIGN KEY (idCompra) REFERENCES Compra(id),
   CONSTRAINT fk_CompraDetalle FOREIGN KEY (idInsumo) REFERENCES Insumo(id)
 );
-drop table VentaDetalle;
+
 CREATE TABLE Venta(
   id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+  idPlatillo INT NOT NULL,
   idCliente int not null,
-  tipoServicio varchar(30),
+  precioUnitario decimal NOT NULL CHECK (precioUnitario > 0),
+  cantidad int NOT NULL CHECK (cantidad > 0),
   total decimal NOT NULL,
   efectivo decimal NOT NULL,
   cambio decimal NOT NULL,
+  CONSTRAINT fk_Venta_Platillo FOREIGN KEY (idPlatillo) REFERENCES Platillo(id),
   CONSTRAINT fk_venta_Cliente FOREIGN KEY(idCliente) REFERENCES Cliente(id),
 );
-select * from VentaDetalle;
-CREATE TABLE VentaDetalle(
-  id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
-  idVenta int not null,
-  idPlatillo INT,
-  idRefresco INT,
-  cantidad int NOT NULL CHECK (cantidad > 0),
-  totalVentaDetalle decimal NOT NULL,
-  CONSTRAINT fk_Venta_Platillo FOREIGN KEY (idPlatillo) REFERENCES Platillo(id),
-  CONSTRAINT fk_Venta FOREIGN KEY (idVenta) REFERENCES Venta(id),
-  CONSTRAINT fk_Venta_Refresco FOREIGN KEY (idRefresco) REFERENCES Refresco(id)
-);
-
+drop table Venta;
+select * from Venta;
 
 ALTER TABLE Cliente ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
 ALTER TABLE Cliente ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
@@ -131,10 +121,6 @@ ALTER TABLE Insumo ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Eliminado, 0: 
 ALTER TABLE Venta ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
 ALTER TABLE Venta ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
 ALTER TABLE Venta ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Eliminado, 0: Inactivo, 1: Activo
-
-ALTER TABLE VentaDetalle ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
-ALTER TABLE VentaDetalle ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
-ALTER TABLE VentaDetalle ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Eliminado, 0: Inactivo, 1: Activo
 
 ALTER TABLE Platillo ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
 ALTER TABLE Platillo ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
@@ -163,17 +149,44 @@ ALTER TABLE Compra ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Eliminado, 0: 
 ALTER TABLE CompraDetalle ADD usuarioRegistro VARCHAR(50) NOT NULL DEFAULT SUSER_NAME();
 ALTER TABLE CompraDetalle ADD fechaRegistro DATETIME NOT NULL DEFAULT GETDATE();
 ALTER TABLE CompraDetalle ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Eliminado, 0: Inactivo, 1: Activo
-go
-select* from Platillo;
-alter table Platillo add alertaDisponibilidad decimal not null;
-INSERT INTO Refresco(codigo, nombre, precio)
-VALUES ('DU003', 'soya',5);
 
-INSERT INTO Platillo(codigo, nombre, precio,alertaDisponibilidad)
-VALUES ('CA002', 'Majadito',15,20);
+GO
 
-INSERT INTO Platillo(codigo, nombre, precio,alertaDisponibilidad)
-VALUES ('PO003', 'Parrillada', 20,20);
+
+create PROC paPlatilloListar @parametro VARCHAR(100)
+AS
+  SELECT * FROM Platillo
+  WHERE estado<>-1 and codigo+nombre LIKE '%'+REPLACE(@parametro, ' ', '%')+'%'
+  ORDER BY estado desc, nombre asc;
+GO
+create PROC paEmpleadoListar @parametro VARCHAR(100)
+AS
+  SELECT e.*,u.usuario
+  FROM Empleado e
+  LEFT JOIN Usuario u ON e.id = u.idEmpleado
+  WHERE e.estado<>-1 
+		AND e.cedulaIdentidad+e.nombres+e.primerApellido+e.segundoApellido LIKE '%'+REPLACE(@parametro, ' ', '%')+'%'
+		order by e.estado desc,nombres asc, primerApellido asc;
+GO
+create PROC paClienteListar @parametro VARCHAR(100)
+AS
+  SELECT * FROM Cliente
+  WHERE estado<>-1 and nit+nombreCompleto LIKE '%'+REPLACE(@parametro, ' ', '%')+'%'
+  ORDER BY estado desc, nombreCompleto asc;
+GO
+
+ exec paClienteListar '';
+EXEC paPlatillosListar '';
+EXEC paEmpleadoListar '';
+
+INSERT INTO Platillo(codigo, nombre, precio)
+VALUES ('AL001', 'Picante de Pollo',15);
+
+INSERT INTO Platillo(codigo, nombre, precio)
+VALUES ('CA002', 'Majadito',15);
+
+INSERT INTO Platillo(codigo, nombre, precio)
+VALUES ('PO003', 'Parrillada', 20);
 
 INSERT INTO Platillo(codigo, nombre, precio)
 VALUES ('VE004', 'Mondongo', 25);
@@ -191,10 +204,11 @@ INSERT INTO Usuario(idEmpleado, usuario, clave)
 VALUES (1, 'jperez', 'i0hcoO/nssY6WOs9pOp5Xw==');
 
 UPDATE Usuario SET clave='i0hcoO/nssY6WOs9pOp5Xw==' WHERE id=1;
-INSERT INTO Venta(idCliente, tipoServicio)
-VALUES (1, 'ALMUERZO ');
+insert into Venta(idPlatillo,idCliente,idEmpleado,precioUnitario,cantidad,total)
+values(1,1,1,1,3,30)
+select*from Usuario;
+select*from Platillo
+select* from venta where id=3
 
-select * from Platillo;
-insert into VentaDetalle(idVenta,idPlatillo,idRefresco,precioUnitario,cantidad,total,efectivo,cambio)
-values(1,1,1,15,2,30,50,20);
-SELECT * FROM VentaDetalle;
+insert into Venta(idPlatillo,idCliente,precioUnitario,cantidad,total,efectivo,cambio)
+values(1,1,15,2,30,50,20);

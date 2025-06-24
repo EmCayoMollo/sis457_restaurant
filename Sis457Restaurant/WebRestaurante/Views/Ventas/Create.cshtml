@@ -1,0 +1,73 @@
+﻿@model WebRestaurante.Models.Ventum
+@{
+    ViewData["Title"] = "Crear Venta";
+}
+
+<h1>Crear Venta</h1>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label>Platillo</label>
+        <select asp-for="IdPlatillo" asp-items="ViewBag.IdPlatillo" class="form-control" id="platilloSelect" required></select>
+    </div>
+    <div class="form-group">
+        <label>Cliente</label>
+        <select asp-for="IdCliente" asp-items="ViewBag.IdCliente" class="form-control" required></select>
+    </div>
+    <div class="form-group">
+        <label>Cantidad</label>
+        <input asp-for="Cantidad" class="form-control" type="number" min="1" value="1" id="cantidadInput" required />
+    </div>
+    <div class="form-group">
+        <label>Precio Unitario</label>
+        <input asp-for="PrecioUnitario" class="form-control" id="precioUnitarioInput" readonly />
+    </div>
+    <div class="form-group">
+        <label>Total</label>
+        <input asp-for="Total" class="form-control" id="totalInput" readonly />
+    </div>
+    <div class="form-group">
+        <label>Efectivo</label>
+        <input asp-for="Efectivo" class="form-control" type="number" min="0" step="0.01" id="efectivoInput" required />
+    </div>
+    <div class="form-group">
+        <label>Cambio</label>
+        <input asp-for="Cambio" class="form-control" id="cambioInput" readonly />
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <a asp-action="Index" class="btn btn-secondary">Volver</a>
+</form>
+
+@section Scripts {
+    <script>
+        var platillos = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(
+                    ((SelectList)ViewBag.IdPlatillo).Select(p => new { id = p.Value, nombre = p.Text })
+            ));
+    var precios = {};
+    @foreach (var p in (SelectList)ViewBag.IdPlatillo)
+        {
+                var platillo = ((IEnumerable<WebRestaurante.Models.Platillo>)ViewBag.Platillos)?.FirstOrDefault(x => x.Id.ToString() == p.Value);
+                if (platillo != null)
+                {
+                        <text>precios["@p.Value"] = @platillo.Precio;</text>
+                }
+        }
+
+        function actualizarPrecioYTotal() {
+            var idPlatillo = document.getElementById('platilloSelect').value;
+            var cantidad = parseInt(document.getElementById('cantidadInput').value) || 1;
+            var precio = precios[idPlatillo] || 0;
+            document.getElementById('precioUnitarioInput').value = precio;
+            var total = precio * cantidad;
+            document.getElementById('totalInput').value = total;
+            var efectivo = parseFloat(document.getElementById('efectivoInput').value) || 0;
+            document.getElementById('cambioInput').value = efectivo - total;
+        }
+
+        document.getElementById('platilloSelect').addEventListener('change', actualizarPrecioYTotal);
+        document.getElementById('cantidadInput').addEventListener('input', actualizarPrecioYTotal);
+        document.getElementById('efectivoInput').addEventListener('input', actualizarPrecioYTotal);
+
+        window.onload = actualizarPrecioYTotal;
+    </script>
+}

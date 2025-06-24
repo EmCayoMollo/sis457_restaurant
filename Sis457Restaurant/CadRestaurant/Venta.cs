@@ -14,15 +14,11 @@ namespace CadRestaurant
     
     public partial class Venta
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Venta()
-        {
-            this.VentaDetalle = new HashSet<VentaDetalle>();
-        }
-    
         public int id { get; set; }
+        public int idPlatillo { get; set; }
         public int idCliente { get; set; }
-        public string tipoServicio { get; set; }
+        public decimal precioUnitario { get; set; }
+        public int cantidad { get; set; }
         public decimal total { get; set; }
         public decimal efectivo { get; set; }
         public decimal cambio { get; set; }
@@ -31,7 +27,6 @@ namespace CadRestaurant
         public short estado { get; set; }
     
         public virtual Cliente Cliente { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<VentaDetalle> VentaDetalle { get; set; }
+        public virtual Platillo Platillo { get; set; }
     }
 }

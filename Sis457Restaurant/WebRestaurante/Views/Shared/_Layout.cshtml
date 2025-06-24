@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/WebRestaurante.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/normalize.css">
+    <link rel="stylesheet" href="~/css/main.css" media="screen" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Playball" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="~/css/bootstrap.css">
+    <link rel="stylesheet" href="~/css/style-portfolio.css">
+    <link rel="stylesheet" href="~/css/picto-foundry-fsood.css" />
+    <link rel="stylesheet" href="~/css/jquery-ui.css">
+    <link href="~/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="icon" href="~/favicon-1.ico" type="image/x-icon">
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom:0;">
+        <div class="collapse navbar-collapse" id="main-navbar">
+            <ul class="nav navbar-nav navbar-right" style="display: flex; flex-wrap: wrap; gap: 50px; align-items: center; justify-content: center; width: 100%;">
+                <li style="white-space: nowrap;">
+                    <a asp-controller="Home" asp-action="Index" class="color_animation">Bienvenidos</a>
+                </li>
+                <li style="white-space: nowrap;">
+                    <a class="color_animation" href="@Url.Action("Index", "Home")#story">Nosotros</a>
+                </li>
+                <li style="white-space: nowrap;">
+                    <a class="color_animation" href="@Url.Action("Index", "Home")#pricing">Menú de Platillos</a>
+                </li>
+                <li style="white-space: nowrap;">
+                    <a class="color_animation" href="@Url.Action("Index", "Home")#beer">Refrescos</a>
+                </li>
+                <li style="white-space: nowrap;">
+                    <a class="color_animation" href="@Url.Action("Index", "Home")#contact">Contactanos</a>
+                </li>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li><a asp-controller="Clientes" asp-action="Index" style="white-space: nowrap;">Clientes</a></li>
+                    <li><a asp-controller="Platillos" asp-action="Index" style="white-space: nowrap;">Platillos</a></li>
+                    <li><a asp-controller="Ventas" asp-action="Index" style="white-space: nowrap;">Ventas</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="white-space: nowrap;">
+                            <span style="overflow: hidden; text-overflow: ellipsis; max-width: 120px; display: inline-block; vertical-align: middle;">@User.Identity.Name</span>
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@await Html.PartialAsync("_LogoutPartial")</li>
+                        </ul>
+                    </li>
+                }
+                else
+                {
+                    
+
+                    <li><a asp-controller="Account" asp-action="Login" class="color_animation">Iniciar Sesión</a></li>
+                }
+            </ul>
+        </div>
+    </nav>
+    <div style="margin-top:70px;"></div>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <footer class="sub_footer" style="margin-top:40px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4"><p class="sub-footer-text text-center">&copy; Restaurant 2014, Theme by <a href="https://themewagon.com/">ThemeWagon</a></p></div>
+                <div class="col-md-4"><p class="sub-footer-text text-center">Back to <a href="#top">TOP</a></p></div>
+                <div class="col-md-4"><p class="sub-footer-text text-center">Built With Care By <a href="#" target="_blank">Us</a></p></div>
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script type="text/javascript" src="~/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="~/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="~/js/jquery.mixitup.min.js"></script>
+    <script type="text/javascript" src="~/js/main.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

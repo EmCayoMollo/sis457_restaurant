@@ -14,12 +14,6 @@ namespace CadRestaurant
     
     public partial class Refresco
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Refresco()
-        {
-            this.VentaDetalle = new HashSet<VentaDetalle>();
-        }
-    
         public int id { get; set; }
         public string codigo { get; set; }
         public string nombre { get; set; }
@@ -27,8 +21,5 @@ namespace CadRestaurant
         public string usuarioRegistro { get; set; }
         public System.DateTime fechaRegistro { get; set; }
         public short estado { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<VentaDetalle> VentaDetalle { get; set; }
     }
 }
